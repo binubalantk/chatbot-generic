@@ -1,0 +1,12 @@
+<div class="message-control">
+    <lib-message-text-input
+        *ngIf="inputMode === allnputMode.TEXT"
+        (onSend)="onMessage($event)"
+        (onVoiceSelected)="onVoiceClicked()"
+    ></lib-message-text-input>
+    <lib-message-voice-input
+        *ngIf="inputMode === allnputMode.VOICE"
+        (onSend)="onMessage($event)"
+        (onVoiceEnd) ="onNoVoiceMessage()"
+    ></lib-message-voice-input>
+</div>

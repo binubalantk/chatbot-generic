@@ -1,0 +1,17 @@
+<div class="message-holder">
+    <div class="message-cup" *ngIf="message">
+        <div class="message receive">
+            {{ message? message.text: 'No message' }}
+            <div  [ngClass]="(voiceActive ? 'tts icon active': 'tts icon')" (click)="activateSpeech()"><i></i></div>
+        </div>
+        <div *ngFor="let image of message.images" class="message receive">
+            <img [src]="getSanitized(image)"/>
+        </div>
+        <div *ngFor="let video of message.videos" class="message receive">
+            <iframe [src]='getSanitized(video)' frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div *ngFor="let url of message.urls" class="message receive">
+            <span>See more </span><a target="_blank" [href]="getSanitized(url)">{{url}}</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="message-input-container">
+    <div class="message-input-text">
+        <lib-loader *ngIf="listening"></lib-loader>
+        <span class="text" *ngIf="!listening" >{{textRecognized}}</span>
+    </div>
+    <div class="message-input-send text">
+        <i class="icon voice"></i>
+    </div>
+  </div>
+  

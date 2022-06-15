@@ -1,0 +1,20 @@
+.message-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    * {
+        font-family: sans-serif;
+    }
+    .loader {
+        border-radius: 0px 9px 9px 9px;
+        flex: none;
+        align-self: flex-start;
+        padding: 10px;
+        font-size: small;
+        background-color: grey;
+        box-shadow: 0px 2px 7px grey;
+        color: #fff;
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+}

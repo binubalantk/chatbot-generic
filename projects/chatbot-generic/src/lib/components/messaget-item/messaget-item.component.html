@@ -1,0 +1,7 @@
+<div class="message-item">
+    <lib-send-message *ngIf="messageItem && messageItem.sent" [message]="messageItem.sent"></lib-send-message>
+    <lib-receive-message *ngIf="messageItem && messageItem.received" [message]="messageItem.received"></lib-receive-message>
+    <div class="loader" *ngIf="!messageItem || !messageItem.received">
+        <lib-loader></lib-loader>
+    </div>
+</div>

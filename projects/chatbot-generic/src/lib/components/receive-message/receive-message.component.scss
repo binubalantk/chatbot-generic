@@ -1,0 +1,78 @@
+.message-holder {
+    width: 84%;
+    display: flex;
+    flex-direction: row;
+    .message-cup {
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        .message {
+            border-radius: 0px 9px 9px 9px;
+            flex: none;
+            align-self: flex-start;
+            padding: 10px;
+            font-size: small;
+        }
+        .receive {
+            background-color: grey;
+            box-shadow: 0px 2px 7px grey;
+            color: #fff;
+            max-width: 286px;
+            position: relative;
+            > iframe, > img {
+                border-radius: 7px;
+                width: 286px;
+            }
+            > img {
+                width: 100%;
+            }
+            &:hover{
+                .tts {
+                    display: block;
+                }
+            }
+            .tts {
+                position: absolute;
+                display: none;
+                top: -5px;
+                right: -5px;
+                padding: 3px;
+                border-radius: 50%;
+                background-color: #fff;
+                border: 2px solid grey;
+                cursor: pointer;
+            }
+            .tts.icon {
+                i {
+                    width: 13px;
+                    height: 13px;
+                    background: url(../../assets/ic_svg_volume-up-primary.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    align-self: center;
+                    display: block;
+                }
+            }
+            .tts.active {
+                border-color: #72ae2f;
+                background-color: #72ae2f;
+                box-shadow: 0px 0px 25px #72ae2f;
+                display: block;
+                i {
+                    background: url(../../assets/ic_svg_volume-up-white.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    align-self: center;
+                }
+            }
+        }
+        .receive {
+            margin-top: 10px;
+        }
+    }
+    * {
+        font-family: sans-serif;
+    }
+}

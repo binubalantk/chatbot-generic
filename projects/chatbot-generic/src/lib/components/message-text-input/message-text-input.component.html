@@ -1,0 +1,11 @@
+<div class="message-input-container">
+  <div class="message-input-text">
+      <input type="text" [(ngModel)] = "message" (keyup.enter)="onSendClick()"/>
+  </div>
+  <div class="message-input-voice" (click)="onVoiceClick()">
+    <i class="icon voice"></i>
+  </div>
+  <div class="message-input-send text" (click)="onSendClick()">
+    <i class="icon send"></i>
+  </div>
+</div>

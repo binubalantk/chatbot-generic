@@ -1,0 +1,5 @@
+<div class="message-box">
+    <lib-message-header class="box-header" (onClose)="onAppClose()"></lib-message-header>
+    <lib-message-list #messagelistScrollable class="box-message-list" [messageItems]="messageItems"></lib-message-list>
+    <lib-message-control class="box-input-control" (onMessageSend)="onMessageSend($event)"></lib-message-control>
+</div>

@@ -1,0 +1,12 @@
+{
+  "name": "@binubalan/chatbot-generic",
+  "version": "0.2.1",
+  "private": false,
+  "peerDependencies": {
+    "@angular/common": "^12.1.4",
+    "@angular/core": "^12.1.4"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

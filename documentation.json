@@ -1,10 +1,193 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "ExtractorModel",
+            "id": "interface-ExtractorModel-94091f9df20a39a1f54eb69fc3b8cdbf4581c3a5cf1f5db3499e6c83b5dd5d20fe84d4ec4355ca265cc397aa07218470c8640f659eecba1be4319bd8f590947e",
+            "file": "projects/chatbot-generic/src/lib/models/extractor.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface ExtractorModel {\r\n    text: string,\r\n    urls: string[]\r\n}",
+            "properties": [
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "urls",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "InputControlData",
+            "id": "interface-InputControlData-45cdedcb5cde8f1ee13bb87d7042182887db3696d98761a467a6567b0f5639b201b34759693f54dcf7fd7cdd3fd696bbb7709b29bd4a122f1eafa06d88fe5520",
+            "file": "projects/chatbot-generic/src/lib/models/inputControlData.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { MessageInputMode } from \"../constants/message-input-mode.enum\";\r\n\r\nexport interface InputControlData {\r\n    message: string;\r\n    mode: MessageInputMode;\r\n}",
+            "properties": [
+                {
+                    "name": "message",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "mode",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MessageInputMode",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "QNAAnswer",
+            "id": "interface-QNAAnswer-36eb3e4b5dbda890b84ed14adca5511213f1914d6bbb50aef538ccd685e4669ffbdff17c0959e37ade90f4627cdbd90b84b8710ccb823e967e8ef9837ace25da",
+            "file": "projects/chatbot-generic/src/lib/models/qnaResponse.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface QnaResponse {\r\n    answers: QNAAnswer[],\r\n    activeLearningEnabled: boolean\r\n}\r\n\r\nexport interface QNAAnswer {\r\n    questions: string[],\r\n    answer: string,\r\n    score: number,\r\n    id: number,\r\n    source: string,\r\n    isDocumentText: boolean,\r\n    metadata: [],\r\n    context: {\r\n        isContextOnly: boolean,\r\n        prompts: []\r\n    }\r\n}",
+            "properties": [
+                {
+                    "name": "answer",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "context",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "isDocumentText",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "metadata",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "questions",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "score",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "source",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "QnaResponse",
+            "id": "interface-QnaResponse-36eb3e4b5dbda890b84ed14adca5511213f1914d6bbb50aef538ccd685e4669ffbdff17c0959e37ade90f4627cdbd90b84b8710ccb823e967e8ef9837ace25da",
+            "file": "projects/chatbot-generic/src/lib/models/qnaResponse.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface QnaResponse {\r\n    answers: QNAAnswer[],\r\n    activeLearningEnabled: boolean\r\n}\r\n\r\nexport interface QNAAnswer {\r\n    questions: string[],\r\n    answer: string,\r\n    score: number,\r\n    id: number,\r\n    source: string,\r\n    isDocumentText: boolean,\r\n    metadata: [],\r\n    context: {\r\n        isContextOnly: boolean,\r\n        prompts: []\r\n    }\r\n}",
+            "properties": [
+                {
+                    "name": "activeLearningEnabled",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "answers",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "QNAAnswer[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        }
+    ],
     "injectables": [
         {
             "name": "ChatbotGenericService",
-            "id": "injectable-ChatbotGenericService-7fdbb2676e7ad455c74413c2da3cebec780cc2b1e32946c60ec5f4d71dbd90fde810c6d520c3bdc727388d8e1640447a1a32f112fe11505682301a77731b3a1f",
+            "id": "injectable-ChatbotGenericService-31dfe81d08f0568d3f6fdf5baf2c21145fcf49504870deaa092b0beb65711d46fa1e99f70b8e988f01936a075dbb179f05792adacca47c2433d694bbc18746ad",
             "file": "projects/chatbot-generic/src/lib/chatbot-generic.service.ts",
             "properties": [],
             "methods": [],
@@ -12,7 +195,7 @@
             "deprecationMessage": "",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class ChatbotGenericService {\n\n  constructor() { }\n}\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class ChatbotGenericService {\r\n\r\n  constructor() { }\r\n}\r\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -24,8 +207,303 @@
             "type": "injectable"
         },
         {
+            "name": "QnamakerService",
+            "id": "injectable-QnamakerService-c6ad02ed9a9bab882963935883ed758441b05e00bd787467e5f3e2473a84dd4e8fae817ed9d12a16d6571701a36981e4ac2b5fcb68cc9e2b2831cde2348f5231",
+            "file": "projects/chatbot-generic/src/lib/services/qnamaker.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "askQuestion",
+                    "args": [
+                        {
+                            "type": "SendMessageModel",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Promise<ReceiveMessageModel | undefined>",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        131
+                    ],
+                    "jsdoctags": [
+                        {
+                            "type": "SendMessageModel",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "cleanupTextAnswer",
+                    "args": [
+                        {
+                            "name": "answer",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 57,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "answer",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "extractAndConvertYoutubeWatchUrls",
+                    "args": [
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "ExtractorModel",
+                    "typeParameters": [],
+                    "line": 66,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "extractImageUrls",
+                    "args": [
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "ExtractorModel",
+                    "typeParameters": [],
+                    "line": 84,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "extractorCompile",
+                    "args": [
+                        {
+                            "name": "regex",
+                            "type": "RegExp",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "ExtractorModel",
+                    "typeParameters": [],
+                    "line": 94,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "regex",
+                            "type": "RegExp",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "extractOtherUrls",
+                    "args": [
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "ExtractorModel",
+                    "typeParameters": [],
+                    "line": 89,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "extractYoutubeEmbeddedUrls",
+                    "args": [
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "ExtractorModel",
+                    "typeParameters": [],
+                    "line": 61,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "inputText",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { environment } from '../environment';\r\nimport { ExtractorModel } from '../models/extractor.model';\r\nimport { QnaResponse } from '../models/qnaResponse.model';\r\nimport { ReceiveMessageModel } from '../models/receiveMessage.model';\r\nimport { SendMessageModel } from '../models/sendMessage.model';\r\nimport { CommonConstants } from '../constants/commons';\r\n\r\n@Injectable({\r\n\tprovidedIn: 'root'\r\n})\r\nexport class QnamakerService {\r\n\r\n\tconstructor(private httpClient: HttpClient) { }\r\n\r\n\tasync askQuestion({ text, messageInputMode }: SendMessageModel): Promise<ReceiveMessageModel | undefined> {\r\n\t\tconst { host, endpointGenAnswer, authorization } = environment.qna;\r\n\t\tconst url = host + endpointGenAnswer;\r\n\t\tconst headers = {\r\n\t\t\tAuthorization: authorization\r\n\t\t}\r\n\t\tconst result = await this.httpClient.post<QnaResponse>(url, { question: text }, { headers }).toPromise();\r\n\t\tif (!result || !result.answers || !result.answers.length) {\r\n\t\t\treturn;\r\n\t\t}\r\n\r\n\t\tconst receivedMessageModel = new ReceiveMessageModel(messageInputMode);\r\n\r\n\t\tlet textCleaned = result.answers[0].id != -1 ? result.answers[0].answer : 'I am not sure about that';\r\n\r\n\t\tif (result.answers[0].id != -1) {\r\n\t\t\ttextCleaned = this.cleanupTextAnswer(textCleaned);\r\n\r\n\t\t\tconst videoExtracted = this.extractYoutubeEmbeddedUrls(textCleaned);\r\n\t\t\ttextCleaned = videoExtracted.text;\r\n\t\t\treceivedMessageModel.addVideos(videoExtracted.urls);\r\n\r\n\t\t\tconst videoWatchExtracted = this.extractAndConvertYoutubeWatchUrls(textCleaned);\r\n\t\t\ttextCleaned = videoWatchExtracted.text;\r\n\t\t\treceivedMessageModel.addVideos(videoWatchExtracted.urls);\r\n\r\n\t\t\tconst imageExtracted = this.extractImageUrls(textCleaned);\r\n\t\t\ttextCleaned = imageExtracted.text;\r\n\t\t\treceivedMessageModel.addImages(imageExtracted.urls);\r\n\r\n\t\t\tconst otherUrlExtracted = this.extractOtherUrls(textCleaned);\r\n\t\t\ttextCleaned = otherUrlExtracted.text;\r\n\t\t\treceivedMessageModel.addUrls(otherUrlExtracted.urls);\r\n\t\t}\r\n\r\n\t\treceivedMessageModel.text = textCleaned;\r\n\r\n\t\treturn receivedMessageModel;\r\n\t}\r\n\r\n\tcleanupTextAnswer(answer: string): string {\r\n\t\treturn answer.replace(/\\*\\*.*\\*\\*\\s*/g, '');\r\n\t}\r\n\r\n\textractYoutubeEmbeddedUrls(inputText: string): ExtractorModel {\r\n\t\tconst regex = /https:\\/\\/www.youtube.com\\/embed\\/[a-zA-Z0-9]+/g;\r\n\t\treturn this.extractorCompile(regex, inputText);\r\n\t}\r\n\r\n\textractAndConvertYoutubeWatchUrls(inputText: string): ExtractorModel {\r\n\t\tconst regex = /https:\\/\\/www.youtube.com\\/watch\\?v=(?<youtubeId>[a-zA-Z0-9]+)/g;\r\n\t\tlet match = regex.exec(inputText);\r\n\t\tconst extractor: ExtractorModel = {\r\n\t\t\ttext: '',\r\n\t\t\turls: []\r\n\t\t};\r\n\t\tdo {\r\n\t\t\tif (match && match.groups) {\r\n\t\t\t\tconst youtubeId = match.groups['youtubeId'];\r\n\t\t\t\textractor.urls.push(`${CommonConstants.YOUTUBE_EMBED_URL_PREFIX}${youtubeId}`);\r\n\t\t\t}\r\n\t\t} while ((match = regex.exec(inputText)) !== null);\r\n\r\n\t\textractor.text = inputText.replace(regex, '');\r\n\t\treturn extractor;\r\n\t}\r\n\r\n\textractImageUrls(inputText: string): ExtractorModel {\r\n\t\tconst regex = /http(s)?:\\/\\/[^\\s]*\\.(png|jpg|jpeg|gif)/g;\r\n\t\treturn this.extractorCompile(regex, inputText);\r\n\t}\r\n\r\n\textractOtherUrls(inputText: string): ExtractorModel {\r\n\t\tconst regex = /http(s)?:\\/\\/[^\\s|\\(|\\)|\\[|\\]|\\,]*/g;\r\n\t\treturn this.extractorCompile(regex, inputText);\r\n\t}\r\n\r\n\textractorCompile(regex: RegExp, inputText: string): ExtractorModel {\r\n\t\tconst extractor: ExtractorModel = {\r\n\t\t\ttext: '',\r\n\t\t\turls: []\r\n\t\t};\r\n\r\n\t\tinputText.match(regex)?.forEach((match) => {\r\n\t\t\textractor.urls.push(match);\r\n\t\t});\r\n\t\textractor.text = inputText.replace(regex, '');\r\n\t\treturn extractor;\r\n\t}\r\n}\r\n\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "httpClient",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 13,
+                "jsdoctags": [
+                    {
+                        "name": "httpClient",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "type": "injectable"
+        },
+        {
+            "name": "ScrollService",
+            "id": "injectable-ScrollService-99f371ebd1f9c0c84a834199a06796afd89ff72cc8df6ba4f16cec3ae807e122bc9a1ef80e2e741306d6bd2261f84eacdd38ef16a06ea136b486cbb9826ecdfb",
+            "file": "projects/chatbot-generic/src/lib/services/scroll.service.ts",
+            "properties": [
+                {
+                    "name": "scrollHandler$",
+                    "defaultValue": "new Subject<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                }
+            ],
+            "methods": [
+                {
+                    "name": "gethandler",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Subject<void>",
+                    "typeParameters": [],
+                    "line": 10,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\r\nimport { Subject } from 'rxjs';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class ScrollService {\r\n  scrollHandler$ = new Subject<void>();\r\n  constructor() { }\r\n  gethandler(): Subject<void>{\r\n    return this.scrollHandler$;\r\n  }\r\n  \r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "type": "injectable"
+        },
+        {
             "name": "SpeechToTextService",
-            "id": "injectable-SpeechToTextService-9b7694cf332e619d073cbc5fe52cd0cfda0f2903ed7f997724ac4ad85e548df9a1cf3ee098b5ee2cadf26a95aa2d7aaf3db59c766d85dd49640d2654a6c4546a",
+            "id": "injectable-SpeechToTextService-8cd65c9d28c6f6015afca8f4f11524db783d5ba0f730239d7f86b39b6b10424cb890b013355398f4df5b0b39658bc4e376b361ae31a212f80bb2ebd3c37e8b27",
             "file": "projects/chatbot-generic/src/lib/services/speech-to-text.service.ts",
             "properties": [
                 {
@@ -163,7 +641,7 @@
             "deprecationMessage": "",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Injectable, OnInit } from '@angular/core';\nimport { Subject } from 'rxjs';\nimport { CustomRecognition } from '../models/customRecognition.model';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class SpeechToTextService implements OnInit{\n\n  private listening$ = new Subject<boolean>();\n  private recognizedText$ = new Subject<string>();\n\n  private recognition?: any;\n\n  constructor() {\n    \n  }\n  ngOnInit(): void {\n    this.initializeRecongnitionObject();\n  }\n\n  getListenStatus(): Subject<boolean> {\n    return this.listening$;\n  }\n\n  getRecognizedText(): Subject<string> {\n    return this.recognizedText$;\n  }\n\n  getWindowObject() {\n    return (window as any);\n  }\n  getRecognitionObject() {\n    return new (this.getWindowObject().SpeechRecognition\n      || this.getWindowObject().webkitSpeechRecognition);\n  }\n\n  getRecognition(): any {\n    if(!this.recognition) {\n      this.initializeRecongnitionObject();\n    }\n\n    if(!this.recognition){\n      throw new Error('Speech recongnition not supported by the browser')\n    }\n\n    return this.recognition;\n  }\n\n  initializeRecongnitionObject() {\n    console.log('Initializing STT service...')\n    this.recognition = this.getRecognitionObject();\n    if(!this.recognition) {\n      throw new Error('Speech recongnition not supported by the browser')\n    }\n    \n    this.recognition.interimResults = false;\n    this.recognition.continuous = false;\n    this.recognition.lang = 'en-US';\n    this.recognition.maxAlternatives = 1;\n    const listeningObject = this.listening$;\n    const textObject = this.recognizedText$;\n    this.recognition.onstart = function(event: any) {\n        console.log('Speech start: ', event);\n        listeningObject.next(true);\n    }\n    this.recognition.onend = function(event: any) {\n      console.log('Speech end: ', event);\n      listeningObject.next(false);\n    } \n    this.recognition.onresult = function(result: any) {\n      console.log('Voice recognized: ', result);\n      if(result.results && result.results.length && result.results[0]){\n        textObject.next(result.results[0][0].transcript);\n      }\n    }\n  }\n\n  start() {\n    this.getRecognition().start();\n    \n  }\n\n  stop() {\n    this.getRecognition().abort()\n  }\n\n\n\n}\n",
+            "sourceCode": "import { Injectable, OnInit } from '@angular/core';\r\nimport { Subject } from 'rxjs';\r\nimport { CustomRecognition } from '../models/customRecognition.model';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class SpeechToTextService implements OnInit{\r\n\r\n  private listening$ = new Subject<boolean>();\r\n  private recognizedText$ = new Subject<string>();\r\n\r\n  private recognition?: any;\r\n\r\n  constructor() {\r\n    \r\n  }\r\n  ngOnInit(): void {\r\n    this.initializeRecongnitionObject();\r\n  }\r\n\r\n  getListenStatus(): Subject<boolean> {\r\n    return this.listening$;\r\n  }\r\n\r\n  getRecognizedText(): Subject<string> {\r\n    return this.recognizedText$;\r\n  }\r\n\r\n  getWindowObject() {\r\n    return (window as any);\r\n  }\r\n  getRecognitionObject() {\r\n    return new (this.getWindowObject().SpeechRecognition\r\n      || this.getWindowObject().webkitSpeechRecognition);\r\n  }\r\n\r\n  getRecognition(): any {\r\n    if(!this.recognition) {\r\n      this.initializeRecongnitionObject();\r\n    }\r\n\r\n    if(!this.recognition){\r\n      throw new Error('Speech recongnition not supported by the browser')\r\n    }\r\n\r\n    return this.recognition;\r\n  }\r\n\r\n  initializeRecongnitionObject() {\r\n    console.log('Initializing STT service...')\r\n    this.recognition = this.getRecognitionObject();\r\n    if(!this.recognition) {\r\n      throw new Error('Speech recongnition not supported by the browser')\r\n    }\r\n    \r\n    this.recognition.interimResults = false;\r\n    this.recognition.continuous = false;\r\n    this.recognition.lang = 'en-US';\r\n    this.recognition.maxAlternatives = 1;\r\n    const listeningObject = this.listening$;\r\n    const textObject = this.recognizedText$;\r\n    this.recognition.onstart = function(event: any) {\r\n        console.log('Speech start: ', event);\r\n        listeningObject.next(true);\r\n    }\r\n    this.recognition.onend = function(event: any) {\r\n      console.log('Speech end: ', event);\r\n      listeningObject.next(false);\r\n    } \r\n    this.recognition.onresult = function(result: any) {\r\n      console.log('Voice recognized: ', result);\r\n      if(result.results && result.results.length && result.results[0]){\r\n        textObject.next(result.results[0][0].transcript);\r\n      }\r\n    }\r\n  }\r\n\r\n  start() {\r\n    this.getRecognition().start();\r\n    \r\n  }\r\n\r\n  stop() {\r\n    this.getRecognition().abort()\r\n  }\r\n\r\n\r\n\r\n}\r\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -173,6 +651,177 @@
                 "line": 13
             },
             "type": "injectable"
+        },
+        {
+            "name": "TextToSpeechService",
+            "id": "injectable-TextToSpeechService-e7c343f3958edaedaa50ab1ec1d8643bf375b610ae0f11e197459754b8769b9a7295cb93dfb857ccbbcc63ed8bdd29fe3001a5e686f5cd0b623175d67feb4be5",
+            "file": "projects/chatbot-generic/src/lib/services/text-to-speech.service.ts",
+            "properties": [
+                {
+                    "name": "isSpeeking$",
+                    "defaultValue": "new Subject<boolean>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Subject<boolean>",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "synth",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "SpeechSynthesis",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methods": [
+                {
+                    "name": "abort",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getSynthesisObject",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getWindowObject",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "speek",
+                    "args": [
+                        {
+                            "name": "text",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "text",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\r\nimport { Subject } from 'rxjs';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class TextToSpeechService {\r\n\r\n  synth: SpeechSynthesis;\r\n  isSpeeking$: Subject<boolean> = new Subject<boolean>();\r\n\r\n  constructor() {\r\n    this.synth = this.getSynthesisObject();\r\n  }\r\n  getWindowObject() {\r\n    return (window as any);\r\n  }\r\n  getSynthesisObject() {\r\n    return this.getWindowObject().speechSynthesis;\r\n  }\r\n\r\n  speek(text: string) {\r\n    const utterance = new SpeechSynthesisUtterance(text);\r\n    \r\n    utterance.onend = () => {\r\n      this.isSpeeking$.next(false);\r\n    }\r\n    utterance.onstart = () => {\r\n      this.isSpeeking$.next(true);\r\n    }\r\n    this.synth.speak(utterance);\r\n  }\r\n\r\n  abort() {\r\n    this.synth.cancel();\r\n  }\r\n\r\n\r\n\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 10
+            },
+            "type": "injectable"
+        },
+        {
+            "name": "UserService",
+            "id": "injectable-UserService-7bb7bf19da816b1c4a25df459f5a9885eb3669a1a6ed8e6d9930ae62cb9e772204723429fdebe72388c3e13bb308235b7e30b4c084448179043ba307eb8e27ac",
+            "file": "projects/chatbot-generic/src/lib/services/user.service.ts",
+            "properties": [
+                {
+                    "name": "username",
+                    "defaultValue": "'user'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                }
+            ],
+            "methods": [
+                {
+                    "name": "getUser",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setUser",
+                    "args": [
+                        {
+                            "name": "username",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "username",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class UserService {\r\n\r\n  username: string = 'user';\r\n\r\n  constructor() { }\r\n\r\n  setUser(username: string) {\r\n    this.username = username;\r\n  }\r\n\r\n  getUser(): string {\r\n    return this.username;\r\n  }\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "type": "injectable"
         }
     ],
     "guards": [],
@@ -180,12 +829,12 @@
     "classes": [
         {
             "name": "CustomRecognition",
-            "id": "class-CustomRecognition-8abd4b167d65f08d52d7f0144c28e7edc2b8f332f80695428fe2ad38bac54eb32dbe40e6bd9d8d91139d0ce7b361d48eb6582626ff9698ecdabbe65ef2ec2c75",
+            "id": "class-CustomRecognition-09556bc0a3850f0fb9b84645476ee7f40e5e86b8198748a4b75bdae76715dafbc2448ac9a2e79dfb3e1317aae66d26df42e56aa8a9096e4b58f1fcb15f2cff30",
             "file": "projects/chatbot-generic/src/lib/models/customRecognition.model.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "export class CustomRecognition {\n    interimResults: boolean;\n    continuous: false;\n    lang: string;\n    maxAlternatives: number;\n    start: any;\n    abort: any;\n    onresult: any;\n\n    constructor(interimResults: boolean,\n      continuous: false,\n      lang: string,\n      maxAlternatives: number) {\n      this.interimResults = interimResults;\n      this.continuous = continuous;\n      this.lang = lang;\n      this.maxAlternatives = maxAlternatives;\n    }\n  }",
+            "sourceCode": "export class CustomRecognition {\r\n    interimResults: boolean;\r\n    continuous: false;\r\n    lang: string;\r\n    maxAlternatives: number;\r\n    start: any;\r\n    abort: any;\r\n    onresult: any;\r\n\r\n    constructor(interimResults: boolean,\r\n      continuous: false,\r\n      lang: string,\r\n      maxAlternatives: number) {\r\n      this.interimResults = interimResults;\r\n      this.continuous = continuous;\r\n      this.lang = lang;\r\n      this.maxAlternatives = maxAlternatives;\r\n    }\r\n  }",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -331,12 +980,12 @@
         },
         {
             "name": "MessageBaseModel",
-            "id": "class-MessageBaseModel-c4477d0a89bf55846a7e28562405034f0c508dc26b0cee4c9d243df363b82f5f7fbdf50744791297ac38346c215616a1d73993047d91e3fbfe4da76369533e55",
+            "id": "class-MessageBaseModel-2c2c3a4395b4cb88977b367694eb69a72d3e3ff9810600c036747f5fb43a4ffc0b1277b6d6efb2bdde6ac04daab16f696dbeca268e88a9fcd8efe8b2780c4f0d",
             "file": "projects/chatbot-generic/src/lib/models/messageBase.model.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "import { MessageMode } from \"../constants/message-mode.enum\";\n\nexport class MessageBaseModel {\n    private _text: string;\n    private mode: MessageMode;\n\n    constructor(mode: MessageMode) {\n        this._text = '';\n        this.mode = mode;\n    }\n\n    set text(message: string) {\n        this._text = message;\n    }\n\n    get text(): string {\n        return this._text;\n    }\n\n    getMode(): MessageMode {\n        return this.mode;\n    }\n}",
+            "sourceCode": "import { MessageInputMode } from \"../constants/message-input-mode.enum\";\r\nimport { MessageMode } from \"../constants/message-mode.enum\";\r\n\r\nexport class MessageBaseModel {\r\n    private _text: string;\r\n    private mode: MessageMode;\r\n    messageInputMode: MessageInputMode;\r\n\r\n    constructor(mode: MessageMode, messageInputMode: MessageInputMode) {\r\n        this._text = '';\r\n        this.mode = mode;\r\n        this.messageInputMode = messageInputMode;\r\n    }\r\n\r\n    set text(message: string) {\r\n        this._text = message;\r\n    }\r\n\r\n    get text(): string {\r\n        return this._text;\r\n    }\r\n\r\n    getMode(): MessageMode {\r\n        return this.mode;\r\n    }\r\n}",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -348,13 +997,28 @@
                         "type": "MessageMode",
                         "deprecated": false,
                         "deprecationMessage": ""
+                    },
+                    {
+                        "name": "messageInputMode",
+                        "type": "MessageInputMode",
+                        "deprecated": false,
+                        "deprecationMessage": ""
                     }
                 ],
-                "line": 5,
+                "line": 7,
                 "jsdoctags": [
                     {
                         "name": "mode",
                         "type": "MessageMode",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "messageInputMode",
+                        "type": "MessageInputMode",
                         "deprecated": false,
                         "deprecationMessage": "",
                         "tagName": {
@@ -371,10 +1035,19 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 4,
+                    "line": 5,
                     "modifierKind": [
                         121
                     ]
+                },
+                {
+                    "name": "messageInputMode",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MessageInputMode",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
                 },
                 {
                     "name": "mode",
@@ -383,7 +1056,7 @@
                     "type": "MessageMode",
                     "optional": false,
                     "description": "",
-                    "line": 5,
+                    "line": 6,
                     "modifierKind": [
                         121
                     ]
@@ -396,7 +1069,7 @@
                     "optional": false,
                     "returnType": "MessageMode",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -419,7 +1092,7 @@
                             }
                         ],
                         "returnType": "void",
-                        "line": 12,
+                        "line": 15,
                         "jsdoctags": [
                             {
                                 "name": "message",
@@ -436,7 +1109,7 @@
                         "name": "text",
                         "type": "string",
                         "returnType": "string",
-                        "line": 16
+                        "line": 19
                     }
                 }
             },
@@ -447,12 +1120,12 @@
         },
         {
             "name": "MessageItem",
-            "id": "class-MessageItem-65228a54977b195c4020c3a2d223497397de57daff5e9ca4fe3138bf78f9bb7534ed787d3b422c38bd75e4c0f464faffb2a62c9803741e19dd6ff5aa3f6beb74",
+            "id": "class-MessageItem-1aaa6be6340b5529a8022ed6e8406a7d582fdd91b06ee43e1f560804561bf9792816e1e8d2ad62435a5db38c5d3f2bd5180d356b8c542864df500d412b356450",
             "file": "projects/chatbot-generic/src/lib/models/messageItem.model.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "import { ReceiveMessageModel } from \"./receiveMessage.model\";\nimport { SendMessageModel } from \"./sendMessage.model\";\n\nexport class MessageItem {\n    sent: SendMessageModel;\n    received? : ReceiveMessageModel;\n    constructor(sentMessage: SendMessageModel){\n        this.sent = sentMessage;\n    }\n}",
+            "sourceCode": "import { ReceiveMessageModel } from \"./receiveMessage.model\";\r\nimport { SendMessageModel } from \"./sendMessage.model\";\r\n\r\nexport class MessageItem {\r\n    sent?: SendMessageModel;\r\n    received? : ReceiveMessageModel;\r\n    constructor(sentMessage?: SendMessageModel){\r\n        this.sent = sentMessage;\r\n    }\r\n}",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -463,7 +1136,8 @@
                         "name": "sentMessage",
                         "type": "SendMessageModel",
                         "deprecated": false,
-                        "deprecationMessage": ""
+                        "deprecationMessage": "",
+                        "optional": true
                     }
                 ],
                 "line": 6,
@@ -473,6 +1147,7 @@
                         "type": "SendMessageModel",
                         "deprecated": false,
                         "deprecationMessage": "",
+                        "optional": true,
                         "tagName": {
                             "text": "param"
                         }
@@ -494,7 +1169,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "SendMessageModel",
-                    "optional": false,
+                    "optional": true,
                     "description": "",
                     "line": 5
                 }
@@ -508,47 +1183,41 @@
         },
         {
             "name": "ReceiveMessageModel",
-            "id": "class-ReceiveMessageModel-e2c0ec72a896150427cc94077a5cd07f9faa84d2fcfbcf1255f7e534b04a49ee9e8d9b81e0af0d2f87ce104faf8e3ffe3c1335f3b0932107f1d3bddca3f43d21",
+            "id": "class-ReceiveMessageModel-d2ea60ecdb3889577b2de7fb1c2146082e29c66bcbacfd5ec86f6ebff12a377760c4629436f690fd06fa42fc21397c3a9a9cfeb2330b781ae00f2ec4572a0b5c",
             "file": "projects/chatbot-generic/src/lib/models/receiveMessage.model.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "import { MessageMode } from \"../constants/message-mode.enum\";\nimport { MessageBaseModel } from \"./messageBase.model\";\n\nexport class ReceiveMessageModel extends MessageBaseModel {\n    private _images?: string[];\n    private _videos?: string[];\n    private _urls?: string[];\n    constructor(){\n        super(MessageMode.RECEIVED);\n    }\n\n    addImages(images: string[]) {\n        if(!this._images){\n            this._images = [];\n        }\n\n        this._images.push(...images);\n    }\n\n    addVideos(videos: string[]) {\n        if(!this._videos){\n            this._videos = [];\n        }\n\n        this._videos.push(...videos);\n    }\n\n    addUrls(urls: string[]) {\n        if(!this._urls){\n            this._urls = [];\n        }\n\n        this._urls.push(...urls);\n        console.log('URLS: ', this._urls);\n    }\n\n    get images(): string[] | undefined {\n        return this._images;\n    }\n\n    get videos(): string[] | undefined {\n        return this._videos;\n    }\n\n    get urls(): string[] | undefined {\n        return this._urls;\n    }\n\n}",
+            "sourceCode": "import { MessageInputMode } from \"../constants/message-input-mode.enum\";\r\nimport { MessageMode } from \"../constants/message-mode.enum\";\r\nimport { MessageBaseModel } from \"./messageBase.model\";\r\n\r\nexport class ReceiveMessageModel extends MessageBaseModel {\r\n    private _images?: string[];\r\n    private _videos?: string[];\r\n    private _urls?: string[];\r\n    constructor(messageInputMode: MessageInputMode){\r\n        super(MessageMode.RECEIVED, messageInputMode);\r\n    }\r\n\r\n    addImages(images: string[]) {\r\n        if(!this._images){\r\n            this._images = [];\r\n        }\r\n\r\n        this._images.push(...images);\r\n    }\r\n\r\n    addVideos(videos: string[]) {\r\n        if(!this._videos){\r\n            this._videos = [];\r\n        }\r\n\r\n        this._videos.push(...videos);\r\n    }\r\n\r\n    addUrls(urls: string[]) {\r\n        if(!this._urls){\r\n            this._urls = [];\r\n        }\r\n\r\n        this._urls.push(...urls);\r\n        console.log('URLS: ', this._urls);\r\n    }\r\n\r\n    get images(): string[] | undefined {\r\n        return this._images;\r\n    }\r\n\r\n    get videos(): string[] | undefined {\r\n        return this._videos;\r\n    }\r\n\r\n    get urls(): string[] | undefined {\r\n        return this._urls;\r\n    }\r\n\r\n}",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "args": [],
-                "line": 7
+                "args": [
+                    {
+                        "name": "messageInputMode",
+                        "type": "MessageInputMode",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 8,
+                "jsdoctags": [
+                    {
+                        "name": "messageInputMode",
+                        "type": "MessageInputMode",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
             },
             "properties": [
                 {
                     "name": "_images",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string[]",
-                    "optional": true,
-                    "description": "",
-                    "line": 5,
-                    "modifierKind": [
-                        121
-                    ]
-                },
-                {
-                    "name": "_urls",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string[]",
-                    "optional": true,
-                    "description": "",
-                    "line": 7,
-                    "modifierKind": [
-                        121
-                    ]
-                },
-                {
-                    "name": "_videos",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string[]",
@@ -560,16 +1229,52 @@
                     ]
                 },
                 {
+                    "name": "_urls",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": true,
+                    "description": "",
+                    "line": 8,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "_videos",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": true,
+                    "description": "",
+                    "line": 7,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
                     "name": "_text",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 4,
+                    "line": 5,
                     "modifierKind": [
                         121
                     ],
+                    "inheritance": {
+                        "file": "MessageBaseModel"
+                    }
+                },
+                {
+                    "name": "messageInputMode",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MessageInputMode",
+                    "optional": false,
+                    "description": "",
+                    "line": 7,
                     "inheritance": {
                         "file": "MessageBaseModel"
                     }
@@ -581,7 +1286,7 @@
                     "type": "MessageMode",
                     "optional": false,
                     "description": "",
-                    "line": 5,
+                    "line": 6,
                     "modifierKind": [
                         121
                     ],
@@ -604,7 +1309,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 13,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -632,7 +1337,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 28,
+                    "line": 29,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -660,7 +1365,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -681,7 +1386,7 @@
                     "optional": false,
                     "returnType": "MessageMode",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "inheritance": {
@@ -698,7 +1403,7 @@
                         "name": "images",
                         "type": "",
                         "returnType": "[] | undefined",
-                        "line": 37
+                        "line": 38
                     }
                 },
                 "videos": {
@@ -707,7 +1412,7 @@
                         "name": "videos",
                         "type": "",
                         "returnType": "[] | undefined",
-                        "line": 41
+                        "line": 42
                     }
                 },
                 "urls": {
@@ -716,7 +1421,7 @@
                         "name": "urls",
                         "type": "",
                         "returnType": "[] | undefined",
-                        "line": 45
+                        "line": 46
                     }
                 }
             },
@@ -727,19 +1432,37 @@
         },
         {
             "name": "SendMessageModel",
-            "id": "class-SendMessageModel-7a04364735c909999de6d1dd4829ca926810a78c2eaf6c0e0c70dead72201e7bd17ca6668cfc01d10b3f945fa777f3d08526744a6f8c44422839166cf28f9d92",
+            "id": "class-SendMessageModel-dd5bdee2b09fba6e8b81b5a9810729b82a4f925d1296f09650298fc7791dd3c3845789efb39518ad1b9e6261bb74b38c8d2b799912d047355792c429191a7429",
             "file": "projects/chatbot-generic/src/lib/models/sendMessage.model.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "class",
-            "sourceCode": "import { MessageMode } from \"../constants/message-mode.enum\";\nimport { MessageBaseModel } from \"./messageBase.model\";\n\nexport class SendMessageModel extends MessageBaseModel {\n    constructor(){\n        super(MessageMode.SEND);\n    }\n}",
+            "sourceCode": "import { MessageInputMode } from \"../constants/message-input-mode.enum\";\r\nimport { MessageMode } from \"../constants/message-mode.enum\";\r\nimport { MessageBaseModel } from \"./messageBase.model\";\r\n\r\nexport class SendMessageModel extends MessageBaseModel {\r\n    constructor(messageInputMode: MessageInputMode){\r\n        super(MessageMode.SEND, messageInputMode);\r\n    }\r\n}",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "args": [],
-                "line": 4
+                "args": [
+                    {
+                        "name": "messageInputMode",
+                        "type": "MessageInputMode",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 5,
+                "jsdoctags": [
+                    {
+                        "name": "messageInputMode",
+                        "type": "MessageInputMode",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
             },
             "properties": [
                 {
@@ -749,10 +1472,22 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 4,
+                    "line": 5,
                     "modifierKind": [
                         121
                     ],
+                    "inheritance": {
+                        "file": "MessageBaseModel"
+                    }
+                },
+                {
+                    "name": "messageInputMode",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MessageInputMode",
+                    "optional": false,
+                    "description": "",
+                    "line": 7,
                     "inheritance": {
                         "file": "MessageBaseModel"
                     }
@@ -764,7 +1499,7 @@
                     "type": "MessageMode",
                     "optional": false,
                     "description": "",
-                    "line": 5,
+                    "line": 6,
                     "modifierKind": [
                         121
                     ],
@@ -780,7 +1515,7 @@
                     "optional": false,
                     "returnType": "MessageMode",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "inheritance": {
@@ -800,7 +1535,7 @@
     "components": [
         {
             "name": "ChatbotGenericComponent",
-            "id": "component-ChatbotGenericComponent-bc7548d1b16051cbcbc7a26014d64360a5692ab62f9d2318106b156fb796604e48884fe294621d2aeaf843eb22d603cbf45a4370be449d3d71d80c6ca632c1b7",
+            "id": "component-ChatbotGenericComponent-bf17c7c5e412b60baaf7ad2da48e31fdbf4a5f545a7ade321f73b712b79c17254b3764429db9a2a1a766a037d34a179883b8c4dc5f740483c8a7e9d63f342991",
             "file": "projects/chatbot-generic/src/lib/chatbot-generic.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -810,14 +1545,44 @@
             "selector": "lib-chatbot-generic",
             "styleUrls": [],
             "styles": [
-                ".chat-boat-overlay { position: fixed; right: 10px; bottom: 10px; background: #fff; padding: 15px; width:300px; border: solid thin #ccc; border-radius: 7px; z-index: 9999;}"
+                ".chat-boat-overlay { position: fixed; right: 10px; bottom: 10px; z-index: 9999;}"
             ],
-            "template": "<div [ngClass]=\"'chat-boat-overlay'\">\n  <span>{{text}}</span>\n  <lib-message-control (onMessageSend)=\"onMessage($event)\"></lib-message-control>\n</div>\n",
+            "template": "<div [ngClass]=\"'chat-boat-overlay'\">\n  <lib-message-box (closeMessageBox)=\"toggleMessageBox($event)\" *ngIf=\"openMessageBox\"></lib-message-box>\n  <lib-message-box-launcher [showUnreadBadge]=\"showUnreadBadge\" (launchMessageBox)=\"toggleMessageBox($event)\" *ngIf=\"!openMessageBox\"></lib-message-box-launcher>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "userName",
+                    "defaultValue": "'user'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [
+                {
+                    "name": "openMessageBox",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "showUnreadBadge",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                },
                 {
                     "name": "text",
                     "defaultValue": "'No message'",
@@ -826,7 +1591,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 22
                 }
             ],
             "methodsClass": [
@@ -836,7 +1601,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21,
+                    "line": 26,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -853,13 +1618,41 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 24,
+                    "line": 30,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
                             "name": "message",
                             "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "toggleMessageBox",
+                    "args": [
+                        {
+                            "name": "isOpen",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "isOpen",
+                            "type": "boolean",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -876,17 +1669,35 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-chatbot-generic',\n  template: `\n    <div [ngClass]=\"'chat-boat-overlay'\">\n      <span>{{text}}</span>\n      <lib-message-control (onMessageSend)=\"onMessage($event)\"></lib-message-control>\n    </div>\n  `,\n  styles: [\n    '.chat-boat-overlay { position: fixed; right: 10px; bottom: 10px; background: #fff; padding: 15px; width:300px; border: solid thin #ccc; border-radius: 7px; z-index: 9999;}'\n  ]\n})\nexport class ChatbotGenericComponent implements OnInit {\n\n  text:string = 'No message';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  onMessage(message: string){\n    this.text = message;\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\nimport { UserService } from './services/user.service';\r\n\r\n@Component({\r\n  selector: 'lib-chatbot-generic',\r\n  template: `\r\n    <div [ngClass]=\"'chat-boat-overlay'\">\r\n      <lib-message-box (closeMessageBox)=\"toggleMessageBox($event)\" *ngIf=\"openMessageBox\"></lib-message-box>\r\n      <lib-message-box-launcher [showUnreadBadge]=\"showUnreadBadge\" (launchMessageBox)=\"toggleMessageBox($event)\" *ngIf=\"!openMessageBox\"></lib-message-box-launcher>\r\n    </div>\r\n  `,\r\n  styles: [\r\n    '.chat-boat-overlay { position: fixed; right: 10px; bottom: 10px; z-index: 9999;}'\r\n  ]\r\n})\r\nexport class ChatbotGenericComponent implements OnInit {\r\n\r\n  @Input() userName: string = 'user';\r\n\r\n  openMessageBox: boolean = false;\r\n  showUnreadBadge: boolean = false;\r\n  text:string = 'No message';\r\n\r\n  constructor(private userService: UserService) { }\r\n\r\n  ngOnInit(): void {\r\n    this.userService.setUser(this.userName);\r\n  }\r\n\r\n  onMessage(message: string){ \r\n  }\r\n\r\n  toggleMessageBox(isOpen: boolean) {\r\n    this.openMessageBox = isOpen;\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": ".chat-boat-overlay { position: fixed; right: 10px; bottom: 10px; background: #fff; padding: 15px; width:300px; border: solid thin #ccc; border-radius: 7px; z-index: 9999;}\n",
+            "stylesData": ".chat-boat-overlay { position: fixed; right: 10px; bottom: 10px; z-index: 9999;}\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "args": [],
-                "line": 17
+                "args": [
+                    {
+                        "name": "userService",
+                        "type": "UserService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 22,
+                "jsdoctags": [
+                    {
+                        "name": "userService",
+                        "type": "UserService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
             },
             "implements": [
                 "OnInit"
@@ -894,7 +1705,7 @@
         },
         {
             "name": "LoaderComponent",
-            "id": "component-LoaderComponent-27d9c27bb33a0566e2e841eeaf3c32aa6d711d4fc3fc412063e4346d44e7ab42f1b926820ab8d633ba7943c33aef65bbfa10ed6a4cfc7da88a3fcc83dd9012fb",
+            "id": "component-LoaderComponent-a469267cce9176c2e5d8099198dba7621a78b5603f28d534afac93f43e4c0eeeea22a74b62ed46c2876d4d8bd4d88eef37d89356ba178863eec2a58c054bf1df",
             "file": "projects/chatbot-generic/src/lib/components/loader/loader.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -932,11 +1743,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-loader',\n  templateUrl: './loader.component.html',\n  styleUrls: ['./loader.component.scss']\n})\nexport class LoaderComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'lib-loader',\r\n  templateUrl: './loader.component.html',\r\n  styleUrls: ['./loader.component.scss']\r\n})\r\nexport class LoaderComponent implements OnInit {\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".lds-ellipsis {\n    display: inline-block;\n    position: relative;\n    width: 80px;\n    height: 14px;\n  }\n  .lds-ellipsis div {\n    position: absolute;\n    top: 8px;\n    width: 6px;\n    height: 6px;\n    border-radius: 50%;\n    background: #fff;\n    animation-timing-function: cubic-bezier(0,1,1,0) !important;\n  }\n  .lds-ellipsis div:nth-child(1) {\n    left: 5px;\n    animation: lds-ellipsis1 0.6s infinite;\n  }\n  .lds-ellipsis div:nth-child(2) {\n    left: 5px;\n    animation: lds-ellipsis2 0.6s infinite;\n  }\n  .lds-ellipsis div:nth-child(3) {\n    left: 20px;\n    animation: lds-ellipsis2 0.6s infinite;\n  }\n  .lds-ellipsis div:nth-child(4) {\n    left: 45px;\n    animation: lds-ellipsis3 0.6s infinite;\n  }\n  @keyframes lds-ellipsis1 {\n    0% {\n      transform: scale(0);\n    }\n    100% {\n      transform: scale(1);\n    }\n  }\n  @keyframes lds-ellipsis3 {\n    0% {\n      transform: scale(1);\n    }\n    100% {\n      transform: scale(0);\n    }\n  }\n  @keyframes lds-ellipsis2 {\n    0% {\n      transform: translate(0, 0);\n    }\n    100% {\n      transform: translate(21px, 0);\n    }\n  }",
+                    "data": ".lds-ellipsis {\r\n    display: inline-block;\r\n    position: relative;\r\n    width: 80px;\r\n    height: 14px;\r\n  }\r\n  .lds-ellipsis div {\r\n    position: absolute;\r\n    top: 8px;\r\n    width: 6px;\r\n    height: 6px;\r\n    border-radius: 50%;\r\n    background: #fff;\r\n    animation-timing-function: cubic-bezier(0,1,1,0) !important;\r\n  }\r\n  .lds-ellipsis div:nth-child(1) {\r\n    left: 5px;\r\n    animation: lds-ellipsis1 0.6s infinite;\r\n  }\r\n  .lds-ellipsis div:nth-child(2) {\r\n    left: 5px;\r\n    animation: lds-ellipsis2 0.6s infinite;\r\n  }\r\n  .lds-ellipsis div:nth-child(3) {\r\n    left: 20px;\r\n    animation: lds-ellipsis2 0.6s infinite;\r\n  }\r\n  .lds-ellipsis div:nth-child(4) {\r\n    left: 45px;\r\n    animation: lds-ellipsis3 0.6s infinite;\r\n  }\r\n  @keyframes lds-ellipsis1 {\r\n    0% {\r\n      transform: scale(0);\r\n    }\r\n    100% {\r\n      transform: scale(1);\r\n    }\r\n  }\r\n  @keyframes lds-ellipsis3 {\r\n    0% {\r\n      transform: scale(1);\r\n    }\r\n    100% {\r\n      transform: scale(0);\r\n    }\r\n  }\r\n  @keyframes lds-ellipsis2 {\r\n    0% {\r\n      transform: translate(0, 0);\r\n    }\r\n    100% {\r\n      transform: translate(21px, 0);\r\n    }\r\n  }",
                     "styleUrl": "./loader.component.scss"
                 }
             ],
@@ -956,7 +1767,7 @@
         },
         {
             "name": "MessageBaseComponent",
-            "id": "component-MessageBaseComponent-5c109f7d78e2840424eb1e107c360df7f50fd187828b2a273c260af71094ffe6e8c9f0cae51c07e0c95e073bfc04c124979cb2523a9073695ba37a09aa0d7534",
+            "id": "component-MessageBaseComponent-b048a1a0bb6a6a4181bb0857871b7865c8c2e9a90e2ffb5d790091d2f6fd44170d933ffb8d68759d612a45d58045f48f4014831e15a7951b26d963d9e05d65db",
             "file": "projects/chatbot-generic/src/lib/components/message-base/message-base.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -990,7 +1801,7 @@
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 23,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -1000,17 +1811,7 @@
                     "optional": false,
                     "returnType": "MessageMode | undefined",
                     "typeParameters": [],
-                    "line": 19,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 16,
+                    "line": 17,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1022,7 +1823,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { MessageMode } from '../../constants/message-mode.enum';\nimport { MessageBaseModel } from '../../models/messageBase.model';\n\n@Component({\n  selector: 'lib-message-base',\n  template: '<div>Base component</div>',\n  styles: ['']\n})\nexport class MessageBaseComponent<MESSAGE_TYPE extends MessageBaseModel> implements OnInit {\n\n  @Input() message?: MESSAGE_TYPE;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  getMode(): MessageMode | undefined {\n    return this.message?.getMode();\n  }\n\n  getMessageString(): string{\n    if(!this.message) {\n      return 'Nothing';\n    }\n\n    return Object.keys(this.message).join(',');\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\nimport { MessageMode } from '../../constants/message-mode.enum';\r\nimport { MessageBaseModel } from '../../models/messageBase.model';\r\n\r\n@Component({\r\n  selector: 'lib-message-base',\r\n  template: '<div>Base component</div>',\r\n  styles: ['']\r\n})\r\nexport class MessageBaseComponent<MESSAGE_TYPE extends MessageBaseModel>{\r\n\r\n  @Input() message?: MESSAGE_TYPE;\r\n\r\n  constructor() { }\r\n\r\n\r\n  getMode(): MessageMode | undefined {\r\n    return this.message?.getMode();\r\n  }\r\n\r\n  getMessageString(): string{\r\n    if(!this.message) {\r\n      return 'Nothing';\r\n    }\r\n\r\n    return Object.keys(this.message).join(',');\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n",
@@ -1033,14 +1834,11 @@
                 "deprecationMessage": "",
                 "args": [],
                 "line": 12
-            },
-            "implements": [
-                "OnInit"
-            ]
+            }
         },
         {
             "name": "MessageBoxComponent",
-            "id": "component-MessageBoxComponent-2c0e10deebb0d28da9ae14e9fffdfc2d22ba33b4d2ec05cf492e17503fd8494a4bd84d56ad32dc26b6cf526f7ed96e298318156b19f597c5ea216054a9daced0",
+            "id": "component-MessageBoxComponent-3fe17f3da7774a763858989a28f9ca8922e587d13e9430cbeee78e4b46af7031d653b941a5ca0c40b5fee1fd29bf88f3e701759a471791e8644e28c365a76d0d",
             "file": "projects/chatbot-generic/src/lib/components/message-box/message-box.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1057,7 +1855,16 @@
             ],
             "viewProviders": [],
             "inputsClass": [],
-            "outputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "closeMessageBox",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "EventEmitter"
+                }
+            ],
             "propertiesClass": [
                 {
                     "name": "messageItems",
@@ -1067,7 +1874,22 @@
                     "type": "MessageItem[]",
                     "optional": false,
                     "description": "",
-                    "line": 11
+                    "line": 18
+                },
+                {
+                    "name": "messagelistScrollable",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef",
+                    "optional": true,
+                    "description": "",
+                    "line": 16,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'messagelistScrollable', {read: ElementRef}"
+                        }
+                    ]
                 }
             ],
             "methodsClass": [
@@ -1077,7 +1899,17 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 15,
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onAppClose",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 41,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -1085,8 +1917,7 @@
                     "name": "onMessageSend",
                     "args": [
                         {
-                            "name": "message",
-                            "type": "string",
+                            "type": "InputControlData",
                             "deprecated": false,
                             "deprecationMessage": ""
                         }
@@ -1094,13 +1925,12 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 18,
+                    "line": 33,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "name": "message",
-                            "type": "string",
+                            "type": "InputControlData",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -1117,12 +1947,121 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { MessageItem } from '../../models/messageItem.model';\n\n@Component({\n  selector: 'lib-message-box',\n  templateUrl: './message-box.component.html',\n  styleUrls: ['./message-box.component.scss']\n})\nexport class MessageBoxComponent implements OnInit {\n\n  messageItems: MessageItem[] = [];\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  onMessageSend(message: string) {\n\n  }\n\n}\n",
+            "sourceCode": "import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';\r\nimport { InputControlData } from '../../models/inputControlData.model';\r\nimport { MessageItem } from '../../models/messageItem.model';\r\nimport { SendMessageModel } from '../../models/sendMessage.model';\r\nimport { ScrollService } from '../../services/scroll.service';\r\n\r\n@Component({\r\n  selector: 'lib-message-box',\r\n  templateUrl: './message-box.component.html',\r\n  styleUrls: ['./message-box.component.scss']\r\n})\r\nexport class MessageBoxComponent implements OnInit {\r\n\r\n  @Output() closeMessageBox = new EventEmitter();\r\n\r\n  @ViewChild('messagelistScrollable', { read: ElementRef }) messagelistScrollable?: ElementRef;\r\n\r\n  messageItems: MessageItem[] = [];\r\n\r\n  constructor(private scrollService: ScrollService) { }\r\n\r\n  ngOnInit(): void {\r\n    this.scrollService.gethandler().subscribe(()=>{\r\n      const messageList = this.messagelistScrollable\r\n      if(messageList) {\r\n        setTimeout(()=>{\r\n          messageList.nativeElement.scrollTop = messageList.nativeElement.scrollHeight;\r\n        }, 500)\r\n      }\r\n    });\r\n  }\r\n\r\n  onMessageSend({message, mode}: InputControlData) {\r\n    //create message object\r\n    const sendMessage = new SendMessageModel(mode);\r\n    sendMessage.text = message;\r\n    const messageItem = new MessageItem(sendMessage);\r\n    this.messageItems.push(messageItem);\r\n  }\r\n\r\n  onAppClose() {\r\n    this.closeMessageBox.emit(false);\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".message-box {\n    display: flex;\n    flex-direction: column;\n    border-radius: 7px;\n    background: aliceblue;\n    height: 500px;\n    border: #999 solid thin;\n    .box-header {\n\n    }\n    .box-message-list {\n        flex: 100%;\n    }\n    .box-input-control {\n        padding: 10px;\n    }\n    * {\n        font-family: sans-serif;\n        background-color: red !important;\n    }\n}",
+                    "data": ".message-box {\r\n    display: flex;\r\n    flex-direction: column;\r\n    border-radius: 7px;\r\n    background: rgb(240, 240, 240);\r\n    height: 500px;\r\n    box-shadow: 0px 5px 15px rgba(20, 20, 20, 0.5);\r\n    .box-message-list {\r\n        flex: 100%;\r\n        overflow-y: auto;\r\n        overflow-x: hidden;\r\n        padding: 10px 1px 10px 10px;\r\n        scroll-behavior: smooth;\r\n    }\r\n    .box-input-control {\r\n        padding: 10px;\r\n    }\r\n    * {\r\n        font-family: sans-serif;\r\n    }\r\n}",
                     "styleUrl": "./message-box.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "scrollService",
+                        "type": "ScrollService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 18,
+                "jsdoctags": [
+                    {
+                        "name": "scrollService",
+                        "type": "ScrollService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"message-box\">\r\n    <lib-message-header class=\"box-header\" (onClose)=\"onAppClose()\"></lib-message-header>\r\n    <lib-message-list #messagelistScrollable class=\"box-message-list\" [messageItems]=\"messageItems\"></lib-message-list>\r\n    <lib-message-control class=\"box-input-control\" (onMessageSend)=\"onMessageSend($event)\"></lib-message-control>\r\n</div>"
+        },
+        {
+            "name": "MessageBoxLauncherComponent",
+            "id": "component-MessageBoxLauncherComponent-8d0d292fbc4cc209bd31962d92f5e1a6e44cd4f153de6eca984ebe1e2a1df653f23702adf758f2861b1c2b2d2e052652fa3ca0812291001549b459c1d34f8561",
+            "file": "projects/chatbot-generic/src/lib/components/message-box-launcher/message-box-launcher.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "lib-message-box-launcher",
+            "styleUrls": [
+                "./message-box-launcher.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./message-box-launcher.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "showUnreadBadge",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "launchMessageBox",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "launch",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'lib-message-box-launcher',\r\n  templateUrl: './message-box-launcher.component.html',\r\n  styleUrls: ['./message-box-launcher.component.scss']\r\n})\r\nexport class MessageBoxLauncherComponent implements OnInit {\r\n\r\n  @Output() launchMessageBox = new EventEmitter();\r\n  @Input() showUnreadBadge = true;\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n  launch() {\r\n    this.launchMessageBox.emit(true);\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".launcher {\r\n    width: 50px;\r\n    height: 50px;\r\n    background: #66bf3c;\r\n    box-shadow: 0px 3px 8px #72ae2f;\r\n    border-radius: 25px 25px 25px 0px;\r\n    position: relative;\r\n    cursor: pointer;\r\n    .icon {\r\n        padding: 7px;\r\n        i {\r\n            padding: 0px 9px 17px 28px;\r\n        }\r\n        i.robot {\r\n            background: url(../../assets/ic_svg_robot-white.svg);\r\n            background-size: contain;\r\n            background-repeat: no-repeat;\r\n            background-position: center;\r\n        }\r\n    }\r\n    .badge {\r\n        position: absolute;\r\n        top: 2px;\r\n        right: 4px;\r\n        border-radius: 63%;\r\n        background-color: red;\r\n        width: 8px;\r\n        height: 8px;\r\n      }\r\n}",
+                    "styleUrl": "./message-box-launcher.component.scss"
                 }
             ],
             "stylesData": "",
@@ -1137,11 +2076,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"message-box\">\n    <div class=\"box-header\">Header</div>\n    <lib-message-list class=\"box-message-list\" [messageItems]=\"messageItems\"></lib-message-list>\n    <lib-message-control class=\"box-input-control\" (onMessageSend)=\"onMessageSend($event)\"></lib-message-control>\n</div>"
+            "templateData": "<div class=\"launcher\" (click)=\"launch()\">\r\n    <div class=\"icon\">\r\n        <i class=\"robot\"></i>\r\n        <span class=\"badge\"></span>\r\n    </div>\r\n</div>"
         },
         {
             "name": "MessageControlComponent",
-            "id": "component-MessageControlComponent-3c28320c963665abd5dfcff94359202ceef079cae2d914b65053c99464bd38d39df995893fb99d036d770d0dd8f92428db891b955fa496f884f30f14b77ba6e5",
+            "id": "component-MessageControlComponent-622a67f3f1055c534610c105189b1398d4417585c5aa6288ffb5c47c6582deb7d47040a2e30cfc9684adf61633cddce5f9ce635a20ab9c9a191cc55265d57b18",
             "file": "projects/chatbot-generic/src/lib/components/message-control/message-control.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1150,7 +2089,7 @@
             "providers": [],
             "selector": "lib-message-control",
             "styleUrls": [
-                "./message-control.component.css"
+                "./message-control.component.scss"
             ],
             "styles": [],
             "templateUrl": [
@@ -1161,10 +2100,10 @@
             "outputsClass": [
                 {
                     "name": "onMessageSend",
-                    "defaultValue": "new EventEmitter<string>()",
+                    "defaultValue": "new EventEmitter<InputControlData>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 15,
+                    "line": 16,
                     "type": "EventEmitter"
                 }
             ],
@@ -1177,7 +2116,7 @@
                     "type": "MessageInputMode",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 18
                 }
             ],
             "methodsClass": [
@@ -1187,7 +2126,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21,
+                    "line": 22,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -1204,7 +2143,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 24,
+                    "line": 25,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1232,7 +2171,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 32,
+                    "line": 37,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1248,12 +2187,22 @@
                     ]
                 },
                 {
+                    "name": "onNoVoiceMessage",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
                     "name": "onVoiceClicked",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 28,
+                    "line": 29,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1265,12 +2214,12 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\nimport { MessageInputMode } from '../../constants/message-input-mode.enum';\n\n@Component({\n  selector: 'lib-message-control',\n  templateUrl: './message-control.component.html',\n  styleUrls: ['./message-control.component.css']\n})\nexport class MessageControlComponent implements OnInit {\n\n  get allnputMode(): typeof MessageInputMode{\n    return MessageInputMode;\n  }\n\n  @Output() onMessageSend = new EventEmitter<string>()\n\n  inputMode: MessageInputMode = this.allnputMode.TEXT;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  onInputModeChange(mode: MessageInputMode) {\n    this.inputMode = mode;\n  }\n\n  onVoiceClicked() {\n    this.onInputModeChange(MessageInputMode.VOICE);\n  }\n\n  onMessage(message: string) {\n    this.onInputModeChange(MessageInputMode.TEXT);\n    console.log('On Send', message);\n    this.onMessageSend.emit(message);\n  }\n\n}\n",
+            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\r\nimport { MessageInputMode } from '../../constants/message-input-mode.enum';\r\nimport { InputControlData } from '../../models/inputControlData.model';\r\n\r\n@Component({\r\n  selector: 'lib-message-control',\r\n  templateUrl: './message-control.component.html',\r\n  styleUrls: ['./message-control.component.scss']\r\n})\r\nexport class MessageControlComponent implements OnInit {\r\n\r\n  get allnputMode(): typeof MessageInputMode{\r\n    return MessageInputMode;\r\n  }\r\n\r\n  @Output() onMessageSend = new EventEmitter<InputControlData>()\r\n\r\n  inputMode: MessageInputMode = this.allnputMode.TEXT;\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n  onInputModeChange(mode: MessageInputMode) {\r\n    this.inputMode = mode;\r\n  }\r\n\r\n  onVoiceClicked() {\r\n    this.onInputModeChange(MessageInputMode.VOICE);\r\n  }\r\n\r\n  onNoVoiceMessage() {\r\n    this.onInputModeChange(MessageInputMode.TEXT);\r\n  }\r\n\r\n  onMessage(message: string) {\r\n    this.onMessageSend.emit({\r\n      message,\r\n      mode: this.inputMode\r\n    });\r\n    this.onInputModeChange(MessageInputMode.TEXT);\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
-                    "styleUrl": "./message-control.component.css"
+                    "data": "* {\r\n    font-family: sans-serif;\r\n}",
+                    "styleUrl": "./message-control.component.scss"
                 }
             ],
             "stylesData": "",
@@ -1280,7 +2229,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 17
+                "line": 18
             },
             "implements": [
                 "OnInit"
@@ -1292,15 +2241,15 @@
                         "name": "allnputMode",
                         "type": "",
                         "returnType": "",
-                        "line": 11
+                        "line": 12
                     }
                 }
             },
-            "templateData": "<div class=\"message-control\">\n    <lib-message-text-input\n        *ngIf=\"inputMode === allnputMode.TEXT\"\n        (onSend)=\"onMessage($event)\"\n        (onVoiceSelected)=\"onVoiceClicked()\"\n    ></lib-message-text-input>\n    <lib-message-voice-input\n        *ngIf=\"inputMode === allnputMode.VOICE\"\n        (onSend)=\"onMessage($event)\"\n    ></lib-message-voice-input>\n</div>\n"
+            "templateData": "<div class=\"message-control\">\r\n    <lib-message-text-input\r\n        *ngIf=\"inputMode === allnputMode.TEXT\"\r\n        (onSend)=\"onMessage($event)\"\r\n        (onVoiceSelected)=\"onVoiceClicked()\"\r\n    ></lib-message-text-input>\r\n    <lib-message-voice-input\r\n        *ngIf=\"inputMode === allnputMode.VOICE\"\r\n        (onSend)=\"onMessage($event)\"\r\n        (onVoiceEnd) =\"onNoVoiceMessage()\"\r\n    ></lib-message-voice-input>\r\n</div>\r\n"
         },
         {
             "name": "MessageHeaderComponent",
-            "id": "component-MessageHeaderComponent-e3df34c44cde0c4c23f21a1205b1c1a04f6138c68b3768940a1f78eabcf1ca69ccda3d0e3f153831c7d83520546d1cb4f179424faf96ccbf39a55f0a66b732f1",
+            "id": "component-MessageHeaderComponent-e06dddd2421e39e7805006ae21bba3bad6b99f6c43bc9917ddba1e828fbb4d2d26cb25345ec59eb52353a5645140692511fb02d59cbd47ccb98767940ac58bbe",
             "file": "projects/chatbot-generic/src/lib/components/message-header/message-header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1317,7 +2266,16 @@
             ],
             "viewProviders": [],
             "inputsClass": [],
-            "outputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "onClose",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "EventEmitter"
+                }
+            ],
             "propertiesClass": [],
             "methodsClass": [
                 {
@@ -1326,7 +2284,17 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onCloseClick",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1338,11 +2306,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-message-header',\n  templateUrl: './message-header.component.html',\n  styleUrls: ['./message-header.component.scss']\n})\nexport class MessageHeaderComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'lib-message-header',\r\n  templateUrl: './message-header.component.html',\r\n  styleUrls: ['./message-header.component.scss']\r\n})\r\nexport class MessageHeaderComponent implements OnInit {\r\n\r\n  @Output() onClose = new EventEmitter<void>();\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n  onCloseClick() {\r\n    this.onClose.emit();\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".message-header{\n    width: 100%;\n    border-radius: 7px 7px 0px 0px;\n    background-color: #72ae2f;\n    display: flex;\n    flex-direction: row;\n    .icon {\n        padding: 7px;\n        i {\n            width: 35px;\n            height: 35px;\n            align-self: center;\n            padding: 10px;\n        }\n        i.robot {\n            background: url(../../assets/ic_svg_robot-white.svg);\n            background-size: contain;\n            background-repeat: no-repeat;\n            background-position: center;\n        }\n        i.close {\n            background: url(../../assets/ic_svg_angle_down-white.svg);\n            background-size: contain;\n            background-repeat: no-repeat;\n            background-position: center;\n        }\n    }\n    .icon {\n       \n    }\n    \n    .title {\n        flex: 100%;\n        color: #fff;\n        align-self: center;\n        font-size: large;\n        margin: 0px 10px 0px 10px;\n    }\n    \n}",
+                    "data": ".message-header{\r\n    width: 100%;\r\n    border-radius: 7px 7px 0px 0px;\r\n    background-color: #72ae2f;\r\n    display: flex;\r\n    flex-direction: row;\r\n    box-shadow: 0px 3px 8px #72ae2f;\r\n    .icon {\r\n        padding: 12px;\r\n        i {\r\n            width: 35px;\r\n            height: 35px;\r\n            align-self: center;\r\n            padding: 10px;\r\n        }\r\n        i.robot {\r\n            background: url(../../assets/ic_svg_robot-white.svg);\r\n            background-size: contain;\r\n            background-repeat: no-repeat;\r\n            background-position: center;\r\n        }\r\n        i.close {\r\n            background: url(../../assets/ic_svg_angle_down-white.svg);\r\n            background-size: contain;\r\n            background-repeat: no-repeat;\r\n            background-position: center;\r\n            cursor: pointer;\r\n        }\r\n    }\r\n    \r\n    .title {\r\n        flex: 100%;\r\n        color: #fff;\r\n        align-self: center;\r\n        font-size: large;\r\n        margin: 0px 10px 0px 10px;\r\n    }\r\n\r\n    * {\r\n        font-family: sans-serif;\r\n    }\r\n    \r\n}",
                     "styleUrl": "./message-header.component.scss"
                 }
             ],
@@ -1353,16 +2321,16 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 8
+                "line": 10
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"message-header\">\n    <div class=\"icon\"><i class=\"robot\"></i></div>\n    <div class=\"title\">Chat Bot</div>\n    <div class=\"icon\"><i class=\"close\"></i></div>\n</div>"
+            "templateData": "<div class=\"message-header\">\r\n    <div class=\"icon\"><i class=\"robot\"></i></div>\r\n    <div class=\"title\">Chat Bot</div>\r\n    <div class=\"icon\" (click)=\"onCloseClick()\"><i class=\"close\"></i></div>\r\n</div>"
         },
         {
             "name": "MessageListComponent",
-            "id": "component-MessageListComponent-fb5bcce7159ac6c8c3b9e207ff7322ed2f36e91855542dc5e97ab07d6bfb2021a9141e7009d6caf87a63abb6650b55c889b7b2c4b340404d0e270404e0a48c42",
+            "id": "component-MessageListComponent-6225f931837964c434aa16f4bbb4bfe6a115c38f111c1585b275e3bdc62da94063218e71744db41112bcd9371a921b6fae00daf448c2dabca86b36a127b00173",
             "file": "projects/chatbot-generic/src/lib/components/message-list/message-list.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1384,7 +2352,7 @@
                     "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 14,
                     "type": "MessageItem[]",
                     "decorators": []
                 }
@@ -1393,12 +2361,22 @@
             "propertiesClass": [],
             "methodsClass": [
                 {
+                    "name": "createWelcomeMessage",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 24,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
                     "name": "ngOnInit",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 15,
+                    "line": 18,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1410,11 +2388,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { MessageItem } from '../../models/messageItem.model';\n\n@Component({\n  selector: 'lib-message-list',\n  templateUrl: './message-list.component.html',\n  styleUrls: ['./message-list.component.scss']\n})\nexport class MessageListComponent implements OnInit {\n\n  @Input() messageItems: MessageItem[] = [];\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';\r\nimport { MessageInputMode } from '../../constants/message-input-mode.enum';\r\nimport { MessageItem } from '../../models/messageItem.model';\r\nimport { ReceiveMessageModel } from '../../models/receiveMessage.model';\r\nimport { UserService } from '../../services/user.service';\r\n\r\n@Component({\r\n  selector: 'lib-message-list',\r\n  templateUrl: './message-list.component.html',\r\n  styleUrls: ['./message-list.component.scss']\r\n})\r\nexport class MessageListComponent implements OnInit {\r\n\r\n  @Input() messageItems: MessageItem[] = [];\r\n  \r\n  constructor(private userService: UserService) { }\r\n\r\n  ngOnInit(): void {\r\n    if(!this.messageItems.length) {\r\n      this.createWelcomeMessage();\r\n    }\r\n  }\r\n\r\n  createWelcomeMessage() {\r\n    const text: string = `Hi ${this.userService.getUser()}, this is Chat Bot, and I am here to assist you. How can I help you today?`;\r\n    const messageItem = new MessageItem();\r\n    messageItem.received = new ReceiveMessageModel(MessageInputMode.VOICE);\r\n    messageItem.received.text = text;\r\n    this.messageItems.push(messageItem);\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "/* ===== Scrollbar CSS ===== */\n  /* Firefox */\n  * {\n    scrollbar-width: thin;\n    scrollbar-color: #72ae2f #ffffff;\n  }\n\n  /* Chrome, Edge, and Safari */\n  *::-webkit-scrollbar {\n    width: 11px !important;\n  }\n\n  *::-webkit-scrollbar-track {\n    background: #ffffff !important;\n  }\n\n  *::-webkit-scrollbar-thumb {\n    background-color: #72ae2f !important;\n    border-radius: 10px !important;\n    border: 2px solid #ffffff !important;\n  }",
+                    "data": "/* ===== Scrollbar CSS ===== */\r\n  /* Firefox */\r\n  * {\r\n    scrollbar-width: thin;\r\n    scrollbar-color: #72ae2f #ffffff;\r\n  }\r\n\r\n  /* Chrome, Edge, and Safari */\r\n  *::-webkit-scrollbar {\r\n    width: 11px !important;\r\n  }\r\n\r\n  *::-webkit-scrollbar-track {\r\n    background: #ffffff !important;\r\n  }\r\n\r\n  *::-webkit-scrollbar-thumb {\r\n    background-color: #72ae2f !important;\r\n    border-radius: 10px !important;\r\n    border: 2px solid #ffffff !important;\r\n  }\r\n  ",
                     "styleUrl": "./message-list.component.scss"
                 }
             ],
@@ -1424,17 +2402,35 @@
                 "description": "",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "args": [],
-                "line": 11
+                "args": [
+                    {
+                        "name": "userService",
+                        "type": "UserService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "userService",
+                        "type": "UserService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"message-list\">\n    <lib-messaget-item *ngFor=\"let messageItem of messageItems\" [messageItem]=\"messageItem\"></lib-messaget-item>\n</div>\n"
+            "templateData": "<div class=\"message-list\">\r\n    <lib-messaget-item *ngFor=\"let messageItem of messageItems\" [messageItem]=\"messageItem\"></lib-messaget-item>\r\n</div>\r\n"
         },
         {
             "name": "MessageTextInputComponent",
-            "id": "component-MessageTextInputComponent-41b6bb09ddd580053fc55e92f1c1740619b045c374a163a52d1b310d4cd3f75da9cffc42636c3c578855434a4c98f0538d8ec70b140e771fff264363d17711b2",
+            "id": "component-MessageTextInputComponent-ecc18ec1597cfb239ad1ee120229733336a752d3a0e56c5fff659080927cd8cdbdbb490bf4bbb238cb16fb5df0dcac7793ca08027338531f3df43a4a5689f7a9",
             "file": "projects/chatbot-generic/src/lib/components/message-text-input/message-text-input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1508,7 +2504,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 26,
+                    "line": 29,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1520,11 +2516,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\n\n@Component({\n  selector: 'lib-message-text-input',\n  templateUrl: './message-text-input.component.html',\n  styleUrls: ['./message-text-input.component.scss']\n})\nexport class MessageTextInputComponent implements OnInit {\n\n  @Output() onSend = new EventEmitter<string>();\n  @Output() onVoiceSelected = new EventEmitter<void>();\n\n  message: string = '';\n\n  constructor() { }\n\n  ngOnInit(): void {\n    \n  }\n\n  onSendClick() {\n    this.onSend.emit(this.message);\n    this.message = '';\n  }\n\n  onVoiceClick() {\n    this.onVoiceSelected.emit();\n  }\n\n}\n",
+            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'lib-message-text-input',\r\n  templateUrl: './message-text-input.component.html',\r\n  styleUrls: ['./message-text-input.component.scss']\r\n})\r\nexport class MessageTextInputComponent implements OnInit {\r\n\r\n  @Output() onSend = new EventEmitter<string>();\r\n  @Output() onVoiceSelected = new EventEmitter<void>();\r\n\r\n  message: string = '';\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n\r\n  onSendClick() {\r\n    if(!this.message) {\r\n      return;\r\n    }\r\n    this.onSend.emit(this.message);\r\n    this.message = '';\r\n  }\r\n\r\n  onVoiceClick() {\r\n    this.onVoiceSelected.emit();\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".message-input-container {\n    width: 100%;\n    background-color: #72AE2F;\n    border-radius: 50px;\n    display: flex;\n    flex-direction: row;\n    box-shadow: 0px 3px 8px #72ae2f;\n\n    .message-input-text{\n        flex: auto;\n        padding: 10px;\n        input {\n            border: none;\n            outline: none;\n            background: none;\n            color: #fff;\n            width: 100%;\n        }\n    }\n    .message-input-voice {\n        width: 38px;\n        height: auto;\n        display: flex;\n        flex-direction: row;\n        padding-left: 5px;\n        cursor: pointer;\n        .icon.voice{\n            background-image: url('../../assets/icon_svg_white_send.svg');\n            color: #555;\n            width: 20px;\n            height: 20px;\n            align-self: center;\n        }\n    }\n\n    .message-input-send {\n        border-radius: 100%;\n        background-color: #fff;\n        width: 38px;\n        height: 38px;\n        display: flex;\n        flex-direction: row;\n        box-sizing: border-box;\n        padding: 7px;\n        cursor: pointer;\n        .icon.send{\n            background-image: url('../../assets/icon_svg_send.svg');\n        }\n    }\n\n}\n.icon{\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain;\n    width: 32px;\n    height: 32px;\n    align-self: center;\n}",
+                    "data": ".message-input-container {\r\n    width: 100%;\r\n    background-color: #72AE2F;\r\n    border-radius: 50px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    box-shadow: 0px 3px 8px #72ae2f;\r\n\r\n    .message-input-text{\r\n        flex: auto;\r\n        padding: 10px;\r\n        input {\r\n            border: none;\r\n            outline: none;\r\n            background: none;\r\n            color: #fff;\r\n            width: 100%;\r\n        }\r\n    }\r\n    .message-input-voice {\r\n        width: 29px;\r\n        height: auto;\r\n        display: flex;\r\n        flex-direction: row;\r\n        padding-left: 5px;\r\n        cursor: pointer;\r\n        .icon.voice{\r\n            background-image: url('../../assets/icon_svg_white_send.svg');\r\n            color: #555;\r\n            width: 20px;\r\n            height: 20px;\r\n            align-self: center;\r\n        }\r\n    }\r\n\r\n    .message-input-send {\r\n        border-radius: 100%;\r\n        background-color: #fff;\r\n        width: 38px;\r\n        height: 38px;\r\n        display: flex;\r\n        flex-direction: row;\r\n        box-sizing: border-box;\r\n        padding: 7px;\r\n        cursor: pointer;\r\n        .icon.send{\r\n            background-image: url('../../assets/icon_svg_send.svg');\r\n        }\r\n    }\r\n    * {\r\n        font-family: sans-serif;\r\n    }\r\n\r\n}\r\n.icon{\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: contain;\r\n    width: 32px;\r\n    height: 32px;\r\n    align-self: center;\r\n}",
                     "styleUrl": "./message-text-input.component.scss"
                 }
             ],
@@ -1540,11 +2536,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"message-input-container\">\n  <div class=\"message-input-text\">\n      <input type=\"text\" [(ngModel)] = \"message\" (keyup.enter)=\"onSendClick()\"/>\n  </div>\n  <div class=\"message-input-voice\" (click)=\"onVoiceClick()\">\n    <i class=\"icon voice\"></i>\n  </div>\n  <div class=\"message-input-send text\" (click)=\"onSendClick()\">\n    <i class=\"icon send\"></i>\n  </div>\n</div>\n"
+            "templateData": "<div class=\"message-input-container\">\r\n  <div class=\"message-input-text\">\r\n      <input type=\"text\" [(ngModel)] = \"message\" (keyup.enter)=\"onSendClick()\"/>\r\n  </div>\r\n  <div class=\"message-input-voice\" (click)=\"onVoiceClick()\">\r\n    <i class=\"icon voice\"></i>\r\n  </div>\r\n  <div class=\"message-input-send text\" (click)=\"onSendClick()\">\r\n    <i class=\"icon send\"></i>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "MessagetItemComponent",
-            "id": "component-MessagetItemComponent-abb99e4046c1824b3e2ace5ddfb3c4f4d0f4c66a535c7d5a2b03a159c285ea4720578f09e7e925c6a52071b633d0b3ff65ddd3c1b39eccbd58bbef56f9ce628f",
+            "id": "component-MessagetItemComponent-3e6d3a3dc146773270a057b332c2d93c8f3a3ef967c5c996febb6f783be21ed0b52773a1a996b5f284a6c3e1339d1d0d77d74da773f916c8d6af32116b2eb8f5",
             "file": "projects/chatbot-generic/src/lib/components/messaget-item/messaget-item.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1565,7 +2561,7 @@
                     "name": "messageItem",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 14,
                     "type": "MessageItem",
                     "decorators": []
                 }
@@ -1574,12 +2570,25 @@
             "propertiesClass": [],
             "methodsClass": [
                 {
+                    "name": "askQuestion",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        131
+                    ]
+                },
+                {
                     "name": "ngOnInit",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 15,
+                    "line": 18,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1591,11 +2600,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { MessageItem } from '../../models/messageItem.model';\n\n@Component({\n  selector: 'lib-messaget-item',\n  templateUrl: './messaget-item.component.html',\n  styleUrls: ['./messaget-item.component.scss']\n})\nexport class MessagetItemComponent implements OnInit {\n\n  @Input() messageItem?: MessageItem;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\r\nimport { MessageItem } from '../../models/messageItem.model';\r\nimport { ReceiveMessageModel } from '../../models/receiveMessage.model';\r\nimport { QnamakerService } from '../../services/qnamaker.service';\r\nimport { ScrollService } from '../../services/scroll.service';\r\n\r\n@Component({\r\n  selector: 'lib-messaget-item',\r\n  templateUrl: './messaget-item.component.html',\r\n  styleUrls: ['./messaget-item.component.scss']\r\n})\r\nexport class MessagetItemComponent implements OnInit {\r\n\r\n  @Input() messageItem?: MessageItem;\r\n\r\n  constructor(private qnaMakerService: QnamakerService, private scrollService: ScrollService) { }\r\n\r\n  ngOnInit(): void {\r\n    this.askQuestion();\r\n  }\r\n\r\n  async askQuestion() {\r\n    if(this.messageItem && !this.messageItem?.received && this.messageItem.sent) {\r\n      const received = await this.qnaMakerService.askQuestion(this.messageItem.sent);\r\n      if(received){\r\n        this.messageItem.received = received;\r\n        this.scrollService.gethandler().next();\r\n      }\r\n    }\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".message-item {\n    display: flex;\n    flex-direction: column;\n    margin-top: 15px;\n}",
+                    "data": ".message-item {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 15px;\r\n    * {\r\n        font-family: sans-serif;\r\n    }\r\n    .loader {\r\n        border-radius: 0px 9px 9px 9px;\r\n        flex: none;\r\n        align-self: flex-start;\r\n        padding: 10px;\r\n        font-size: small;\r\n        background-color: grey;\r\n        box-shadow: 0px 2px 7px grey;\r\n        color: #fff;\r\n        margin-top: 10px;\r\n        padding-left: 20px;\r\n    }\r\n}",
                     "styleUrl": "./messaget-item.component.scss"
                 }
             ],
@@ -1605,17 +2614,50 @@
                 "description": "",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "args": [],
-                "line": 11
+                "args": [
+                    {
+                        "name": "qnaMakerService",
+                        "type": "QnamakerService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "scrollService",
+                        "type": "ScrollService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "qnaMakerService",
+                        "type": "QnamakerService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "scrollService",
+                        "type": "ScrollService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"message-item\">\n    <lib-send-message *ngIf=\"messageItem && messageItem.sent\" [message]=\"messageItem.sent\"></lib-send-message>\n    <lib-receive-message *ngIf=\"messageItem && messageItem.sent\" [message]=\"messageItem.received\"></lib-receive-message>\n</div>\n"
+            "templateData": "<div class=\"message-item\">\r\n    <lib-send-message *ngIf=\"messageItem && messageItem.sent\" [message]=\"messageItem.sent\"></lib-send-message>\r\n    <lib-receive-message *ngIf=\"messageItem && messageItem.received\" [message]=\"messageItem.received\"></lib-receive-message>\r\n    <div class=\"loader\" *ngIf=\"!messageItem || !messageItem.received\">\r\n        <lib-loader></lib-loader>\r\n    </div>\r\n</div>\r\n"
         },
         {
             "name": "MessageVoiceInputComponent",
-            "id": "component-MessageVoiceInputComponent-a9640ddbf12badc23f0253258257aa689acbef7a7a7dd5783bea11007d67b4245b7e567b016b460d2dd34bd864ce42b9c7d4613d38377b9012c3921a8cfcb961",
+            "id": "component-MessageVoiceInputComponent-7f65eeedca4999432a4aea424efe6620d267c6859daf87f20e0089c7a47f217ab4f79419c11f858a6f81b514e7180a9ef41d6da42c2cc416b8d9c4b8396e693d",
             "file": "projects/chatbot-generic/src/lib/components/message-voice-input/message-voice-input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1640,6 +2682,14 @@
                     "deprecationMessage": "",
                     "line": 11,
                     "type": "EventEmitter"
+                },
+                {
+                    "name": "onVoiceEnd",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "EventEmitter"
                 }
             ],
             "propertiesClass": [
@@ -1651,17 +2701,17 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 13
+                    "line": 14
                 },
                 {
                     "name": "textRecognized",
-                    "defaultValue": "'listening'",
+                    "defaultValue": "'Not Listening'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 14
+                    "line": 15
                 }
             ],
             "methodsClass": [
@@ -1671,7 +2721,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 34,
+                    "line": 37,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -1681,7 +2731,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1693,11 +2743,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';\nimport { SpeechToTextService } from '../../services/speech-to-text.service';\n\n@Component({\n  selector: 'lib-message-voice-input',\n  templateUrl: './message-voice-input.component.html',\n  styleUrls: ['./message-voice-input.component.scss']\n})\nexport class MessageVoiceInputComponent implements OnInit, OnDestroy {\n\n  @Output() onSend = new EventEmitter<string>();\n\n  listening: boolean = false;\n  textRecognized: string = 'listening';\n\n  constructor(\n    private sttService: SpeechToTextService\n  ) { }\n\n  ngOnInit(): void {\n    this.sttService.getListenStatus()\n      .subscribe((status)=>{\n        this.listening = status;\n      });\n    this.sttService.getRecognizedText()\n      .subscribe((text)=>{\n        this.textRecognized = text;\n        console.log('Text subs: ', text)\n        this.onSend.emit(text);\n      });\n    this.sttService.start();\n  }\n\n  ngOnDestroy(): void {\n    this.sttService.stop();\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';\r\nimport { SpeechToTextService } from '../../services/speech-to-text.service';\r\n\r\n@Component({\r\n  selector: 'lib-message-voice-input',\r\n  templateUrl: './message-voice-input.component.html',\r\n  styleUrls: ['./message-voice-input.component.scss']\r\n})\r\nexport class MessageVoiceInputComponent implements OnInit, OnDestroy {\r\n\r\n  @Output() onSend = new EventEmitter<string>();\r\n  @Output() onVoiceEnd = new EventEmitter<void>();\r\n\r\n  listening: boolean = false;\r\n  textRecognized: string = 'Not Listening';\r\n\r\n  constructor(\r\n    private sttService: SpeechToTextService\r\n  ) { }\r\n\r\n  ngOnInit(): void {\r\n    this.sttService.getListenStatus()\r\n      .subscribe((status)=>{\r\n        this.listening = status;\r\n        if(!status) {\r\n          this.onVoiceEnd.emit();\r\n        }\r\n      });\r\n    this.sttService.getRecognizedText()\r\n      .subscribe((text)=>{\r\n        this.textRecognized = text;\r\n        this.onSend.emit(text);\r\n      });\r\n    this.sttService.start();\r\n  }\r\n\r\n  ngOnDestroy(): void {\r\n    this.sttService.stop();\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".message-input-container {\n    width: 100%;\n    background-color: #72AE2F;\n    border-radius: 50px;\n    display: flex;\n    flex-direction: row;\n    box-shadow: 0px 3px 8px #72ae2f;\n\n    .message-input-text{\n        flex: auto;\n        padding: 10px;\n        .text{\n            color: #fff;\n        }\n    }\n\n    .message-input-send {\n        border-radius: 100%;\n        background-color: #fff;\n        width: 38px;\n        height: 38px;\n        display: flex;\n        flex-direction: row;\n        box-sizing: border-box;\n        padding: 7px;\n        cursor: pointer;\n        .icon.voice{\n            background-image: url('../../assets/icon_svg_mic.svg');\n            width: 25px;\n            height: 25px;\n            align-self: center;\n        }\n    }\n\n}\n.icon{\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: contain;\n    align-self: center;\n}",
+                    "data": ".message-input-container {\r\n    width: 100%;\r\n    background-color: #72AE2F;\r\n    border-radius: 50px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    box-shadow: 0px 3px 8px #72ae2f;\r\n\r\n    .message-input-text{\r\n        flex: auto;\r\n        padding: 10px;\r\n        .text{\r\n            color: #fff;\r\n        }\r\n    }\r\n\r\n    .message-input-send {\r\n        border-radius: 100%;\r\n        background-color: #fff;\r\n        width: 38px;\r\n        height: 38px;\r\n        display: flex;\r\n        flex-direction: row;\r\n        box-sizing: border-box;\r\n        padding: 7px;\r\n        cursor: pointer;\r\n        .icon.voice{\r\n            background-image: url('../../assets/icon_svg_mic.svg');\r\n            width: 25px;\r\n            height: 25px;\r\n            align-self: center;\r\n        }\r\n    }\r\n\r\n    * {\r\n        font-family: sans-serif;\r\n    }\r\n\r\n}\r\n.icon{\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: contain;\r\n    align-self: center;\r\n}",
                     "styleUrl": "./message-voice-input.component.scss"
                 }
             ],
@@ -1715,7 +2765,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 14,
+                "line": 15,
                 "jsdoctags": [
                     {
                         "name": "sttService",
@@ -1732,11 +2782,11 @@
                 "OnInit",
                 "OnDestroy"
             ],
-            "templateData": "<div class=\"message-input-container\">\n    <div class=\"message-input-text\">\n        <lib-loader *ngIf=\"listening\"></lib-loader>\n        <span class=\"text\" *ngIf=\"!listening\" >{{textRecognized}}</span>\n    </div>\n    <div class=\"message-input-send text\">\n        <i class=\"icon voice\"></i>\n    </div>\n  </div>\n  "
+            "templateData": "<div class=\"message-input-container\">\r\n    <div class=\"message-input-text\">\r\n        <lib-loader *ngIf=\"listening\"></lib-loader>\r\n        <span class=\"text\" *ngIf=\"!listening\" >{{textRecognized}}</span>\r\n    </div>\r\n    <div class=\"message-input-send text\">\r\n        <i class=\"icon voice\"></i>\r\n    </div>\r\n  </div>\r\n  "
         },
         {
             "name": "ReceiveMessageComponent",
-            "id": "component-ReceiveMessageComponent-1ea49a929f8d641fed315447f216507b811897f5447c45925b8d74e08e94b5519829fde50532e9a4316312a5273d49366487abe55ebb8c66b2b95aedf03d0821",
+            "id": "component-ReceiveMessageComponent-b92f2beee7dfbfc9a5ca31dcd0b35b25e372279f0ac7749b3842ebac5f66f70fabc66768ac5f056e35ee4a24ace080547e7f7642c7e2fc4f5f49d30a950d360d",
             "file": "projects/chatbot-generic/src/lib/components/receive-message/receive-message.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1766,8 +2816,29 @@
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "voiceActive",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
             "methodsClass": [
+                {
+                    "name": "activateSpeech",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 35,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
                 {
                     "name": "getSanitized",
                     "args": [
@@ -1781,7 +2852,7 @@
                     "optional": false,
                     "returnType": "SafeResourceUrl",
                     "typeParameters": [],
-                    "line": 17,
+                    "line": 31,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1797,12 +2868,22 @@
                     ]
                 },
                 {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
                     "name": "getMessageString",
                     "args": [],
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 23,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "inheritance": {
@@ -1815,20 +2896,7 @@
                     "optional": false,
                     "returnType": "MessageMode | undefined",
                     "typeParameters": [],
-                    "line": 19,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "inheritance": {
-                        "file": "MessageBaseComponent"
-                    }
-                },
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 16,
+                    "line": 17,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "inheritance": {
@@ -1843,11 +2911,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { ReceiveMessageModel } from '../../models/receiveMessage.model';\nimport { MessageBaseComponent } from '../message-base/message-base.component';\nimport { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';\n\n@Component({\n  selector: 'lib-receive-message',\n  templateUrl: './receive-message.component.html',\n  styleUrls: ['./receive-message.component.scss']\n})\nexport class ReceiveMessageComponent extends MessageBaseComponent<ReceiveMessageModel> implements OnInit {\n\n  constructor(private _sanitizer: DomSanitizer){\n    super();\n  }\n\n  getSanitized(textUrl: string): SafeResourceUrl {\n    return this._sanitizer.bypassSecurityTrustResourceUrl(textUrl);\n  }\n}\n",
+            "sourceCode": "import { Component, OnDestroy, OnInit } from '@angular/core';\r\nimport { ReceiveMessageModel } from '../../models/receiveMessage.model';\r\nimport { MessageBaseComponent } from '../message-base/message-base.component';\r\nimport { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';\r\nimport { TextToSpeechService } from '../../services/text-to-speech.service';\r\nimport { MessageInputMode } from '../../constants/message-input-mode.enum';\r\n\r\n@Component({\r\n  selector: 'lib-receive-message',\r\n  templateUrl: './receive-message.component.html',\r\n  styleUrls: ['./receive-message.component.scss']\r\n})\r\nexport class ReceiveMessageComponent extends MessageBaseComponent<ReceiveMessageModel> implements OnInit {\r\n\r\n  voiceActive: boolean = false;\r\n\r\n  constructor(private _sanitizer: DomSanitizer, private ttsService: TextToSpeechService){\r\n    super();\r\n  }\r\n  \r\n  ngOnInit(): void {\r\n    this.ttsService.isSpeeking$.subscribe((isSpeeking) => {\r\n      this.voiceActive = isSpeeking;\r\n    });\r\n\r\n    if(this.message?.messageInputMode === MessageInputMode.VOICE) {\r\n      this.activateSpeech();\r\n    }\r\n  }\r\n\r\n  getSanitized(textUrl: string): SafeResourceUrl {\r\n    return this._sanitizer.bypassSecurityTrustResourceUrl(textUrl);\r\n  }\r\n\r\n  activateSpeech() {\r\n    if(this.voiceActive) {\r\n      this.ttsService.abort();\r\n      this.voiceActive = false;\r\n      return;\r\n    }\r\n\r\n    if(this.message && this.message.text){\r\n      this.voiceActive = true;\r\n      this.ttsService.speek(this.message.text);\r\n    }   \r\n    \r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".message-holder {\n    width: 80%;\n    display: flex;\n    flex-direction: row;\n    .message-cup {\n        flex: auto;\n        display: flex;\n        flex-direction: column;\n        .message {\n            border-radius: 0px 9px 9px 9px;\n            flex: none;\n            align-self: flex-start;\n            padding: 10px;\n        }\n        .receive {\n            background-color: grey;\n            box-shadow: 0px 2px 7px grey;\n            color: #fff;\n            > iframe, > img {\n                border-radius: 7px;\n            }\n            > img {\n                width: 100%;\n            }\n        }\n        .receive {\n            margin-top: 10px;\n        }\n    }\n}",
+                    "data": ".message-holder {\r\n    width: 84%;\r\n    display: flex;\r\n    flex-direction: row;\r\n    .message-cup {\r\n        flex: auto;\r\n        display: flex;\r\n        flex-direction: column;\r\n        .message {\r\n            border-radius: 0px 9px 9px 9px;\r\n            flex: none;\r\n            align-self: flex-start;\r\n            padding: 10px;\r\n            font-size: small;\r\n        }\r\n        .receive {\r\n            background-color: grey;\r\n            box-shadow: 0px 2px 7px grey;\r\n            color: #fff;\r\n            max-width: 286px;\r\n            position: relative;\r\n            > iframe, > img {\r\n                border-radius: 7px;\r\n                width: 286px;\r\n            }\r\n            > img {\r\n                width: 100%;\r\n            }\r\n            &:hover{\r\n                .tts {\r\n                    display: block;\r\n                }\r\n            }\r\n            .tts {\r\n                position: absolute;\r\n                display: none;\r\n                top: -5px;\r\n                right: -5px;\r\n                padding: 3px;\r\n                border-radius: 50%;\r\n                background-color: #fff;\r\n                border: 2px solid grey;\r\n                cursor: pointer;\r\n            }\r\n            .tts.icon {\r\n                i {\r\n                    width: 13px;\r\n                    height: 13px;\r\n                    background: url(../../assets/ic_svg_volume-up-primary.svg);\r\n                    background-position: center;\r\n                    background-repeat: no-repeat;\r\n                    background-size: contain;\r\n                    align-self: center;\r\n                    display: block;\r\n                }\r\n            }\r\n            .tts.active {\r\n                border-color: #72ae2f;\r\n                background-color: #72ae2f;\r\n                box-shadow: 0px 0px 25px #72ae2f;\r\n                display: block;\r\n                i {\r\n                    background: url(../../assets/ic_svg_volume-up-white.svg);\r\n                    background-position: center;\r\n                    background-repeat: no-repeat;\r\n                    background-size: contain;\r\n                    align-self: center;\r\n                }\r\n            }\r\n        }\r\n        .receive {\r\n            margin-top: 10px;\r\n        }\r\n    }\r\n    * {\r\n        font-family: sans-serif;\r\n    }\r\n}",
                     "styleUrl": "./receive-message.component.scss"
                 }
             ],
@@ -1863,13 +2931,28 @@
                         "type": "DomSanitizer",
                         "deprecated": false,
                         "deprecationMessage": ""
+                    },
+                    {
+                        "name": "ttsService",
+                        "type": "TextToSpeechService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
                     }
                 ],
-                "line": 11,
+                "line": 15,
                 "jsdoctags": [
                     {
                         "name": "_sanitizer",
                         "type": "DomSanitizer",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "ttsService",
+                        "type": "TextToSpeechService",
                         "deprecated": false,
                         "deprecationMessage": "",
                         "tagName": {
@@ -1882,11 +2965,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"message-holder\">\n    <div class=\"message-cup\" *ngIf=\"message\">\n        <div class=\"message receive\">\n            {{ message? message.text: 'No message' }}\n        </div>\n        <div *ngFor=\"let video of message.videos\" class=\"message receive\">\n            <iframe [src]='getSanitized(video)' frameborder=\"0\" allowfullscreen></iframe>\n        </div>\n        <div *ngFor=\"let image of message.images\" class=\"message receive\">\n            <img [src]=\"getSanitized(image)\"/>\n        </div>\n        <div *ngFor=\"let url of message.urls\" class=\"message receive\">\n            <span>See more </span><a target=\"_blank\" [href]=\"getSanitized(url)\">{{url}}</a>\n        </div>\n    </div>\n</div>"
+            "templateData": "<div class=\"message-holder\">\r\n    <div class=\"message-cup\" *ngIf=\"message\">\r\n        <div class=\"message receive\">\r\n            {{ message? message.text: 'No message' }}\r\n            <div  [ngClass]=\"(voiceActive ? 'tts icon active': 'tts icon')\" (click)=\"activateSpeech()\"><i></i></div>\r\n        </div>\r\n        <div *ngFor=\"let image of message.images\" class=\"message receive\">\r\n            <img [src]=\"getSanitized(image)\"/>\r\n        </div>\r\n        <div *ngFor=\"let video of message.videos\" class=\"message receive\">\r\n            <iframe [src]='getSanitized(video)' frameborder=\"0\" allowfullscreen></iframe>\r\n        </div>\r\n        <div *ngFor=\"let url of message.urls\" class=\"message receive\">\r\n            <span>See more </span><a target=\"_blank\" [href]=\"getSanitized(url)\">{{url}}</a>\r\n        </div>\r\n    </div>\r\n</div>"
         },
         {
             "name": "SendMessageComponent",
-            "id": "component-SendMessageComponent-741f5858533176c923d4122cada08f856739e02b6ab06c0e5f3caf6809d6f1f2554e0fc876894de114273e082a3db118851cdac5a0d7ec292edf566d0302bf89",
+            "id": "component-SendMessageComponent-96b786280257da90f9e394566d978cff58bdb7c0f82c517b62947d909b5f9336f005c35d6610d2bf216c3606f45a591fbcbc88017700cc69a0029407071888fc",
             "file": "projects/chatbot-generic/src/lib/components/send-message/send-message.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1924,7 +3007,7 @@
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 23,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "inheritance": {
@@ -1937,20 +3020,7 @@
                     "optional": false,
                     "returnType": "MessageMode | undefined",
                     "typeParameters": [],
-                    "line": 19,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "inheritance": {
-                        "file": "MessageBaseComponent"
-                    }
-                },
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 16,
+                    "line": 17,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "inheritance": {
@@ -1965,32 +3035,29 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { SendMessageModel } from '../../models/sendMessage.model';\nimport { MessageBaseComponent } from '../message-base/message-base.component';\n\n@Component({\n  selector: 'lib-send-message',\n  templateUrl: './send-message.component.html',\n  styleUrls: ['./send-message.component.scss']\n})\nexport class SendMessageComponent extends MessageBaseComponent<SendMessageModel> implements OnInit {\n\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\nimport { SendMessageModel } from '../../models/sendMessage.model';\r\nimport { MessageBaseComponent } from '../message-base/message-base.component';\r\n\r\n@Component({\r\n  selector: 'lib-send-message',\r\n  templateUrl: './send-message.component.html',\r\n  styleUrls: ['./send-message.component.scss']\r\n})\r\nexport class SendMessageComponent extends MessageBaseComponent<SendMessageModel> {\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".message-holder {\n    width: 80%;\n    display: flex;\n    flex-direction: row;\n    margin-left: auto;\n    .message-cup {\n        flex: auto;\n        display: flex;\n        flex-direction: column;\n        .message {\n            border-radius: 9px 0px 9px 9px;\n            background-color: grey;\n            flex: none;\n            align-self: flex-end;\n            padding: 10px;\n        }\n        .send {\n            background-color: #979d00;\n            box-shadow: 0px 2px 7px #979d00;\n            color: #fff;\n        }\n    }\n    .icon {\n        background: url(../../assets/ic_svg_user_secondary_green.svg);\n        width: 35px;\n        height: 35px;\n        background-position: center;\n        background-repeat: no-repeat;\n        background-size: contain;\n        align-self: center;\n        box-sizing: border-box;\n        padding: 25px;\n        margin-top: -6px;\n    }\n}",
+                    "data": ".message-holder {\r\n    width: 80%;\r\n    display: flex;\r\n    flex-direction: row;\r\n    margin-left: auto;\r\n    .message-cup {\r\n        flex: auto;\r\n        display: flex;\r\n        flex-direction: column;\r\n        .message {\r\n            border-radius: 9px 0px 9px 9px;\r\n            background-color: grey;\r\n            flex: none;\r\n            align-self: flex-end;\r\n            padding: 10px;\r\n            font-size: small;\r\n        }\r\n        .send {\r\n            background-color: #979d00;\r\n            box-shadow: 0px 2px 7px #979d00;\r\n            color: #fff;\r\n        }\r\n    }\r\n    .icon {\r\n        background: url(../../assets/ic_svg_user_secondary_green.svg);\r\n        width: 35px;\r\n        height: 35px;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        background-size: contain;\r\n        align-self: center;\r\n        box-sizing: border-box;\r\n        padding: 25px;\r\n        margin-top: -6px;\r\n    }\r\n    * {\r\n        font-family: sans-serif;\r\n    }\r\n}",
                     "styleUrl": "./send-message.component.scss"
                 }
             ],
             "stylesData": "",
             "extends": "MessageBaseComponent",
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<div class=\"message-holder\">\n    <div class=\"message-cup\">\n        <div class=\"message send\">\n            {{ message? message.text: 'No message' }}\n        </div>\n    </div>\n    <div class=\"icon avatar\"></div>\n</div>"
+            "templateData": "<div class=\"message-holder\">\r\n    <div class=\"message-cup\">\r\n        <div class=\"message send\">\r\n            {{ message? message.text: 'No message' }}\r\n        </div>\r\n    </div>\r\n    <div class=\"icon avatar\"></div>\r\n</div>"
         }
     ],
     "modules": [
         {
             "name": "ChatbotGenericModule",
-            "id": "module-ChatbotGenericModule-daa6d24767d9d3b89ee463c8668d7d50478e6100bcfe0f30b9680c47814c03da113a0a725bc474e4ddf0bf6371542069a4027762f5aaddc8e9191f43e72c3924",
+            "id": "module-ChatbotGenericModule-5c50fcd6949db9716da0c6cb4c3ab6ec9f789f9f06d82f6ce0f009e7610e0ef042073ea00909e70f6eec9b6f72bc23e59e9a32530ef292c0162ef88dafca1cc8",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/chatbot-generic/src/lib/chatbot-generic.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { FormsModule } from '@angular/forms';\nimport { ChatbotGenericComponent } from './chatbot-generic.component';\nimport { MessageControlComponent } from './components/message-control/message-control.component';\nimport { MessageTextInputComponent } from './components/message-text-input/message-text-input.component';\nimport { MessageVoiceInputComponent } from './components/message-voice-input/message-voice-input.component';\nimport { LoaderComponent } from './components/loader/loader.component';\nimport { MessageBaseComponent } from './components/message-base/message-base.component';\nimport { SendMessageComponent } from './components/send-message/send-message.component';\nimport { ReceiveMessageComponent } from './components/receive-message/receive-message.component';\nimport { MessagetItemComponent } from './components/messaget-item/messaget-item.component';\nimport { MessageListComponent } from './components/message-list/message-list.component';\nimport { MessageBoxComponent } from './components/message-box/message-box.component';\nimport { MessageHeaderComponent } from './components/message-header/message-header.component';\n\n\n\n@NgModule({\n  declarations: [\n    ChatbotGenericComponent,\n    MessageControlComponent,\n    MessageTextInputComponent,\n    MessageVoiceInputComponent,\n    LoaderComponent,\n    MessageBaseComponent,\n    SendMessageComponent,\n    ReceiveMessageComponent,\n    MessagetItemComponent,\n    MessageListComponent,\n    MessageBoxComponent,\n    MessageHeaderComponent\n  ],\n  imports: [\n    CommonModule,\n    FormsModule\n  ],\n  exports: [\n    ChatbotGenericComponent,\n    MessageTextInputComponent,\n    MessageControlComponent,\n    MessageVoiceInputComponent,\n    LoaderComponent,\n    SendMessageComponent,\n    ReceiveMessageComponent,\n    MessagetItemComponent,\n    MessageListComponent,\n    MessageBoxComponent,\n    MessageHeaderComponent\n  ]\n})\nexport class ChatbotGenericModule { }\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { NgModule } from '@angular/core';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { HttpClientModule } from '@angular/common/http'\r\nimport { ChatbotGenericComponent } from './chatbot-generic.component';\r\nimport { MessageControlComponent } from './components/message-control/message-control.component';\r\nimport { MessageTextInputComponent } from './components/message-text-input/message-text-input.component';\r\nimport { MessageVoiceInputComponent } from './components/message-voice-input/message-voice-input.component';\r\nimport { LoaderComponent } from './components/loader/loader.component';\r\nimport { MessageBaseComponent } from './components/message-base/message-base.component';\r\nimport { SendMessageComponent } from './components/send-message/send-message.component';\r\nimport { ReceiveMessageComponent } from './components/receive-message/receive-message.component';\r\nimport { MessagetItemComponent } from './components/messaget-item/messaget-item.component';\r\nimport { MessageListComponent } from './components/message-list/message-list.component';\r\nimport { MessageBoxComponent } from './components/message-box/message-box.component';\r\nimport { MessageHeaderComponent } from './components/message-header/message-header.component';\r\nimport { MessageBoxLauncherComponent } from './components/message-box-launcher/message-box-launcher.component';\r\n\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    ChatbotGenericComponent,\r\n    MessageControlComponent,\r\n    MessageTextInputComponent,\r\n    MessageVoiceInputComponent,\r\n    LoaderComponent,\r\n    MessageBaseComponent,\r\n    SendMessageComponent,\r\n    ReceiveMessageComponent,\r\n    MessagetItemComponent,\r\n    MessageListComponent,\r\n    MessageBoxComponent,\r\n    MessageHeaderComponent,\r\n    MessageBoxLauncherComponent\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    FormsModule,\r\n    HttpClientModule\r\n  ],\r\n  exports: [\r\n    ChatbotGenericComponent,\r\n    MessageTextInputComponent,\r\n    MessageControlComponent,\r\n    MessageVoiceInputComponent,\r\n    LoaderComponent,\r\n    SendMessageComponent,\r\n    ReceiveMessageComponent,\r\n    MessagetItemComponent,\r\n    MessageListComponent,\r\n    MessageBoxComponent,\r\n    MessageHeaderComponent,\r\n    MessageBoxLauncherComponent\r\n  ]\r\n})\r\nexport class ChatbotGenericModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2010,6 +3077,9 @@
                         },
                         {
                             "name": "MessageBoxComponent"
+                        },
+                        {
+                            "name": "MessageBoxLauncherComponent"
                         },
                         {
                             "name": "MessageControlComponent"
@@ -2054,6 +3124,9 @@
                             "name": "MessageBoxComponent"
                         },
                         {
+                            "name": "MessageBoxLauncherComponent"
+                        },
+                        {
                             "name": "MessageControlComponent"
                         },
                         {
@@ -2093,6 +3166,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "CommonConstants",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/chatbot-generic/src/lib/constants/commons.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n    YOUTUBE_EMBED_URL_PREFIX: 'https://www.youtube.com/embed/'\r\n}"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2107,6 +3190,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/chatbot-generic.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/components/message-box-launcher.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2176,6 +3269,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/components/message-voice-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/components/receive-message.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2193,14 +3296,14 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Default",
+                "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/components/message-voice-input.stories.ts",
+                "file": "projects/chatbot-generic/src/lib/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
+                "type": "object",
+                "defaultValue": "{\r\n    qna:{\r\n        host: 'https://qnahaquathon.azurewebsites.net/qnamaker',\r\n        endpointGenAnswer: '/knowledgebases/fa7e13e3-0420-4e2c-9379-a8c2456275f2/generateAnswer',\r\n        endpointKey: 'a0be5c5b-b50f-47a4-947d-710be7ac3678',\r\n        authorization: 'EndpointKey a0be5c5b-b50f-47a4-947d-710be7ac3678'\r\n    }\r\n}"
             },
             {
                 "name": "message1",
@@ -2210,7 +3313,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "new ReceiveMessageModel()"
+                "defaultValue": "new ReceiveMessageModel(MessageInputMode.TEXT)"
             },
             {
                 "name": "message2",
@@ -2220,7 +3323,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "new ReceiveMessageModel()"
+                "defaultValue": "new ReceiveMessageModel(MessageInputMode.TEXT)"
             },
             {
                 "name": "messageItem",
@@ -2260,7 +3363,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "new ReceiveMessageModel()"
+                "defaultValue": "new ReceiveMessageModel(MessageInputMode.TEXT)"
             },
             {
                 "name": "receivedMessage",
@@ -2270,7 +3373,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "new ReceiveMessageModel()"
+                "defaultValue": "new ReceiveMessageModel(MessageInputMode.TEXT)"
             },
             {
                 "name": "receivedMessage2",
@@ -2280,7 +3383,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "new ReceiveMessageModel()"
+                "defaultValue": "new ReceiveMessageModel(MessageInputMode.TEXT)"
             },
             {
                 "name": "require",
@@ -2299,7 +3402,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "new SendMessageModel()"
+                "defaultValue": "new SendMessageModel(MessageInputMode.TEXT)"
             },
             {
                 "name": "sentMessage",
@@ -2309,7 +3412,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "new SendMessageModel()"
+                "defaultValue": "new SendMessageModel(MessageInputMode.TEXT)"
             },
             {
                 "name": "sentMessage2",
@@ -2319,7 +3422,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "new SendMessageModel()"
+                "defaultValue": "new SendMessageModel(MessageInputMode.TEXT)"
             },
             {
                 "name": "Template",
@@ -2329,7 +3432,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ChatbotGenericComponent>",
-                "defaultValue": "(args: ChatbotGenericComponent) => ({\n  props: args,\n})"
+                "defaultValue": "(args: ChatbotGenericComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/components/message-box-launcher.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MessageBoxLauncherComponent>",
+                "defaultValue": "(args: MessageBoxLauncherComponent) => ({\r\n    props: args,\r\n  })"
             },
             {
                 "name": "Template",
@@ -2339,7 +3452,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MessageBoxComponent>",
-                "defaultValue": "(args: MessageBoxComponent) => ({\n    props: args,\n  })"
+                "defaultValue": "(args: MessageBoxComponent) => ({\r\n    props: args,\r\n  })"
             },
             {
                 "name": "Template",
@@ -2349,7 +3462,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MessageControlComponent>",
-                "defaultValue": "(args: MessageControlComponent) => ({\n    props: args,\n  })"
+                "defaultValue": "(args: MessageControlComponent) => ({\r\n    props: args,\r\n  })"
             },
             {
                 "name": "Template",
@@ -2359,7 +3472,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MessageHeaderComponent>",
-                "defaultValue": "(args: MessageHeaderComponent) => ({\n    props: args,\n  })"
+                "defaultValue": "(args: MessageHeaderComponent) => ({\r\n    props: args,\r\n  })"
             },
             {
                 "name": "Template",
@@ -2369,7 +3482,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MessagetItemComponent>",
-                "defaultValue": "(args: MessagetItemComponent) => ({\n    props: args,\n  })"
+                "defaultValue": "(args: MessagetItemComponent) => ({\r\n    props: args,\r\n  })"
             },
             {
                 "name": "Template",
@@ -2379,7 +3492,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MessageListComponent>",
-                "defaultValue": "(args: MessageListComponent) => ({\n    props: args,\n  })"
+                "defaultValue": "(args: MessageListComponent) => ({\r\n    props: args,\r\n  })"
             },
             {
                 "name": "Template",
@@ -2389,27 +3502,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MessageTextInputComponent>",
-                "defaultValue": "(args: MessageTextInputComponent) => ({\n    props: args,\n  })"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/components/receive-message.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ReceiveMessageComponent>",
-                "defaultValue": "(args: ReceiveMessageComponent) => ({\n    props: args,\n  })"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/components/send-message.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<SendMessageComponent>",
-                "defaultValue": "(args: SendMessageComponent) => ({\n    props: args,\n  })"
+                "defaultValue": "(args: MessageTextInputComponent) => ({\r\n    props: args,\r\n  })"
             },
             {
                 "name": "Template",
@@ -2419,7 +3512,27 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MessageVoiceInputComponent>",
-                "defaultValue": "(args: MessageVoiceInputComponent) => ({\n    props: args,\n  })"
+                "defaultValue": "(args: MessageVoiceInputComponent) => ({\r\n    props: args,\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/components/receive-message.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ReceiveMessageComponent>",
+                "defaultValue": "(args: ReceiveMessageComponent) => ({\r\n    props: args,\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/components/send-message.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<SendMessageComponent>",
+                "defaultValue": "(args: SendMessageComponent) => ({\r\n    props: args,\r\n  })"
             },
             {
                 "name": "VoiceActive",
@@ -2489,6 +3602,18 @@
             }
         ],
         "groupedVariables": {
+            "projects/chatbot-generic/src/lib/constants/commons.ts": [
+                {
+                    "name": "CommonConstants",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/chatbot-generic/src/lib/constants/commons.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n    YOUTUBE_EMBED_URL_PREFIX: 'https://www.youtube.com/embed/'\r\n}"
+                }
+            ],
             "projects/chatbot-generic/src/test.ts": [
                 {
                     "name": "context",
@@ -2529,7 +3654,29 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ChatbotGenericComponent>",
-                    "defaultValue": "(args: ChatbotGenericComponent) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: ChatbotGenericComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/components/message-box-launcher.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/components/message-box-launcher.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/components/message-box-launcher.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MessageBoxLauncherComponent>",
+                    "defaultValue": "(args: MessageBoxLauncherComponent) => ({\r\n    props: args,\r\n  })"
                 }
             ],
             "stories/components/message-box.stories.ts": [
@@ -2551,7 +3698,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MessageBoxComponent>",
-                    "defaultValue": "(args: MessageBoxComponent) => ({\n    props: args,\n  })"
+                    "defaultValue": "(args: MessageBoxComponent) => ({\r\n    props: args,\r\n  })"
                 }
             ],
             "stories/components/message-control.stories.ts": [
@@ -2573,7 +3720,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MessageControlComponent>",
-                    "defaultValue": "(args: MessageControlComponent) => ({\n    props: args,\n  })"
+                    "defaultValue": "(args: MessageControlComponent) => ({\r\n    props: args,\r\n  })"
                 },
                 {
                     "name": "VoiceActive",
@@ -2605,7 +3752,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MessageHeaderComponent>",
-                    "defaultValue": "(args: MessageHeaderComponent) => ({\n    props: args,\n  })"
+                    "defaultValue": "(args: MessageHeaderComponent) => ({\r\n    props: args,\r\n  })"
                 }
             ],
             "stories/components/message-item.stories.ts": [
@@ -2637,7 +3784,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "new ReceiveMessageModel()"
+                    "defaultValue": "new ReceiveMessageModel(MessageInputMode.TEXT)"
                 },
                 {
                     "name": "sentMessage",
@@ -2647,7 +3794,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "new SendMessageModel()"
+                    "defaultValue": "new SendMessageModel(MessageInputMode.TEXT)"
                 },
                 {
                     "name": "Template",
@@ -2657,7 +3804,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MessagetItemComponent>",
-                    "defaultValue": "(args: MessagetItemComponent) => ({\n    props: args,\n  })"
+                    "defaultValue": "(args: MessagetItemComponent) => ({\r\n    props: args,\r\n  })"
                 }
             ],
             "stories/components/message-list.stories.ts": [
@@ -2699,7 +3846,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "new ReceiveMessageModel()"
+                    "defaultValue": "new ReceiveMessageModel(MessageInputMode.TEXT)"
                 },
                 {
                     "name": "receivedMessage2",
@@ -2709,7 +3856,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "new ReceiveMessageModel()"
+                    "defaultValue": "new ReceiveMessageModel(MessageInputMode.TEXT)"
                 },
                 {
                     "name": "sentMessage",
@@ -2719,7 +3866,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "new SendMessageModel()"
+                    "defaultValue": "new SendMessageModel(MessageInputMode.TEXT)"
                 },
                 {
                     "name": "sentMessage2",
@@ -2729,7 +3876,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "new SendMessageModel()"
+                    "defaultValue": "new SendMessageModel(MessageInputMode.TEXT)"
                 },
                 {
                     "name": "Template",
@@ -2739,7 +3886,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MessageListComponent>",
-                    "defaultValue": "(args: MessageListComponent) => ({\n    props: args,\n  })"
+                    "defaultValue": "(args: MessageListComponent) => ({\r\n    props: args,\r\n  })"
                 }
             ],
             "stories/components/message-text-input.stories.ts": [
@@ -2761,7 +3908,29 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MessageTextInputComponent>",
-                    "defaultValue": "(args: MessageTextInputComponent) => ({\n    props: args,\n  })"
+                    "defaultValue": "(args: MessageTextInputComponent) => ({\r\n    props: args,\r\n  })"
+                }
+            ],
+            "stories/components/message-voice-input.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/components/message-voice-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/components/message-voice-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MessageVoiceInputComponent>",
+                    "defaultValue": "(args: MessageVoiceInputComponent) => ({\r\n    props: args,\r\n  })"
                 }
             ],
             "stories/components/receive-message.stories.ts": [
@@ -2783,7 +3952,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "new ReceiveMessageModel()"
+                    "defaultValue": "new ReceiveMessageModel(MessageInputMode.TEXT)"
                 },
                 {
                     "name": "message2",
@@ -2793,7 +3962,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "new ReceiveMessageModel()"
+                    "defaultValue": "new ReceiveMessageModel(MessageInputMode.TEXT)"
                 },
                 {
                     "name": "Template",
@@ -2803,7 +3972,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ReceiveMessageComponent>",
-                    "defaultValue": "(args: ReceiveMessageComponent) => ({\n    props: args,\n  })"
+                    "defaultValue": "(args: ReceiveMessageComponent) => ({\r\n    props: args,\r\n  })"
                 },
                 {
                     "name": "WithAllTypeOfMessages",
@@ -2835,29 +4004,19 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<SendMessageComponent>",
-                    "defaultValue": "(args: SendMessageComponent) => ({\n    props: args,\n  })"
+                    "defaultValue": "(args: SendMessageComponent) => ({\r\n    props: args,\r\n  })"
                 }
             ],
-            "stories/components/message-voice-input.stories.ts": [
+            "projects/chatbot-generic/src/lib/environment.ts": [
                 {
-                    "name": "Default",
+                    "name": "environment",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "stories/components/message-voice-input.stories.ts",
+                    "file": "projects/chatbot-generic/src/lib/environment.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/components/message-voice-input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<MessageVoiceInputComponent>",
-                    "defaultValue": "(args: MessageVoiceInputComponent) => ({\n    props: args,\n  })"
+                    "type": "object",
+                    "defaultValue": "{\r\n    qna:{\r\n        host: 'https://qnahaquathon.azurewebsites.net/qnamaker',\r\n        endpointGenAnswer: '/knowledgebases/fa7e13e3-0420-4e2c-9379-a8c2456275f2/generateAnswer',\r\n        endpointKey: 'a0be5c5b-b50f-47a4-947d-710be7ac3678',\r\n        authorization: 'EndpointKey a0be5c5b-b50f-47a4-947d-710be7ac3678'\r\n    }\r\n}"
                 }
             ]
         },
@@ -2923,7 +4082,7 @@
                 "linktype": "component",
                 "name": "ChatbotGenericComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {
@@ -2950,6 +4109,15 @@
                 "linktype": "component",
                 "name": "MessageBaseComponent",
                 "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chatbot-generic/src/lib/components/message-box-launcher/message-box-launcher.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MessageBoxLauncherComponent",
+                "coveragePercent": 0,
                 "coverageCount": "0/6",
                 "status": "low"
             },
@@ -2959,7 +4127,7 @@
                 "linktype": "component",
                 "name": "MessageBoxComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
@@ -2968,7 +4136,7 @@
                 "linktype": "component",
                 "name": "MessageControlComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {
@@ -2977,7 +4145,7 @@
                 "linktype": "component",
                 "name": "MessageHeaderComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -2986,7 +4154,7 @@
                 "linktype": "component",
                 "name": "MessageListComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -3004,7 +4172,7 @@
                 "linktype": "component",
                 "name": "MessageVoiceInputComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
@@ -3013,7 +4181,7 @@
                 "linktype": "component",
                 "name": "MessagetItemComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -3022,7 +4190,7 @@
                 "linktype": "component",
                 "name": "ReceiveMessageComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {
@@ -3031,7 +4199,27 @@
                 "linktype": "component",
                 "name": "SendMessageComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chatbot-generic/src/lib/constants/commons.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "CommonConstants",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chatbot-generic/src/lib/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -3044,12 +4232,30 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/chatbot-generic/src/lib/models/extractor.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ExtractorModel",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chatbot-generic/src/lib/models/inputControlData.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "InputControlData",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/chatbot-generic/src/lib/models/messageBase.model.ts",
                 "type": "class",
                 "linktype": "classe",
                 "name": "MessageBaseModel",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -3062,12 +4268,30 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/chatbot-generic/src/lib/models/qnaResponse.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "QNAAnswer",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chatbot-generic/src/lib/models/qnaResponse.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "QnaResponse",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/chatbot-generic/src/lib/models/receiveMessage.model.ts",
                 "type": "class",
                 "linktype": "classe",
                 "name": "ReceiveMessageModel",
                 "coveragePercent": 0,
-                "coverageCount": "0/11",
+                "coverageCount": "0/12",
                 "status": "low"
             },
             {
@@ -3076,7 +4300,25 @@
                 "linktype": "classe",
                 "name": "SendMessageModel",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chatbot-generic/src/lib/services/qnamaker.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "QnamakerService",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chatbot-generic/src/lib/services/scroll.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "ScrollService",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -3086,6 +4328,24 @@
                 "name": "SpeechToTextService",
                 "coveragePercent": 0,
                 "coverageCount": "0/14",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chatbot-generic/src/lib/services/text-to-speech.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "TextToSpeechService",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/chatbot-generic/src/lib/services/user.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "UserService",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -3120,6 +4380,26 @@
             },
             {
                 "filePath": "stories/chatbot-generic.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/components/message-box-launcher.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/components/message-box-launcher.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

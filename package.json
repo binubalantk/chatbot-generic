@@ -12,8 +12,12 @@
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook",
-    "set-reg-local": "npm set registry http://192.168.1.9:4873/",
-    "reset-registry": "npm set registry https://registry.npmjs.org/"
+    "set-reg-local": "npm set registry http://localhost:4873/",
+    "reset-registry": "npm set registry https://registry.npmjs.org/",
+    "install-verdaccio": "npm install --location=global verdaccio",
+    "start-verdaccio": "verdaccio",
+    "reguser-verdaccio": "npm adduser --registry http://localhost:4873/",
+    "publish-verdaccio": "npm run build && npm publish --registry http://localhost:4873/"
   },
   "private": false,
   "dependencies": {
